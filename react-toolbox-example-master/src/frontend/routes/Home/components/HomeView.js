@@ -1,16 +1,39 @@
 import React from 'react';
-import PurpleAppBar from '../../../component/PurpleAppBar';      // AppBar with simple overrides
-import SuccessButton from '../../../component/SuccessButton';    // A button with complex overrides
+import { List, ListItem } from 'react-toolbox/lib/list';
 import { Button } from 'react-toolbox/lib/button'; // Bundled component import
 
-const App = () => (
-  <div>
-    <PurpleAppBar />
-    <section style={{ padding: 20 }}>
-      <SuccessButton label='Success' primary raised />
-      <Button label='Primary Button' primary />
-    </section>
-  </div>
-);
+class HomeView extends React.Component {
 
-export default App;
+  static propTypes = {
+    documents: React.PropTypes.object,
+    retreiveDocuments: React.PropTypes.func
+  }
+
+  componentDidMount () {
+    this.props.retreiveDocuments()
+  }
+
+  render () {
+    return (
+      <div>
+        <form action='http://localhost:8080/document/' encType='multipart/form-data' method='POST'>
+          <input type='file' name='file' />
+          <input type="text" name="title"/>
+          <Button type='submit'>Submit </Button>
+        </form>
+        <List>
+          {this.props.documents.map(document => {
+            return (
+              <Link to={document.get('link')}
+                key={document.get('link')}>
+                <ListItem key={document.get('link')}>
+                  {document.get('title')}
+                </ListItem>
+              </Link>)
+          })}
+        </List>
+      </div>
+    )
+  }
+}
+export default HomeView
