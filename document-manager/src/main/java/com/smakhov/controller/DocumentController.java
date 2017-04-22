@@ -57,7 +57,7 @@ public class DocumentController {
 	}
 
 	@PostMapping("/")
-	public DocumentBean handleFileUpload(@RequestParam("file") MultipartFile multipartFile)
+	public DocumentBean handleFileUpload(@RequestParam("title") String title, @RequestParam("file") MultipartFile multipartFile)
 			throws IllegalStateException, IOException {
 		ITesseract tesseract = new Tesseract();
 		DocumentEntity saved = dao.save(new DocumentEntity());
@@ -74,6 +74,7 @@ public class DocumentController {
 		} catch (TesseractException e) {
 			System.err.println(e.getMessage());
 		}
+		saved.setTitle(title);
 		saved.setContent(result);
 		dao.save(saved);
 		DocumentBean bean = new DocumentBean(saved.getTitle(), saved.getContent());
