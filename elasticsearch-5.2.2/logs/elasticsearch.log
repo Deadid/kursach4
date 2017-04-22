@@ -1,0 +1,24 @@
+[2017-03-11T19:34:39,330][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-03-11T19:34:40,103][INFO ][o.e.e.NodeEnvironment    ] [vwmq4fy] using [1] data paths, mounts [[Volume (F:)]], net usable_space [35.1gb], net total_space [170.6gb], spins? [unknown], types [NTFS]
+[2017-03-11T19:34:40,105][INFO ][o.e.e.NodeEnvironment    ] [vwmq4fy] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-03-11T19:34:40,656][INFO ][o.e.n.Node               ] node name [vwmq4fy] derived from node ID [vwmq4fynTtSaCx9TLy_oBQ]; set [node.name] to override
+[2017-03-11T19:34:40,854][INFO ][o.e.n.Node               ] version[5.2.2], pid[1652], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Windows 10/10.0/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2017-03-11T19:34:48,385][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [aggs-matrix-stats]
+[2017-03-11T19:34:48,385][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [ingest-common]
+[2017-03-11T19:34:48,386][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [lang-expression]
+[2017-03-11T19:34:48,386][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [lang-groovy]
+[2017-03-11T19:34:48,386][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [lang-mustache]
+[2017-03-11T19:34:48,387][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [lang-painless]
+[2017-03-11T19:34:48,387][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [percolator]
+[2017-03-11T19:34:48,387][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [reindex]
+[2017-03-11T19:34:48,387][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [transport-netty3]
+[2017-03-11T19:34:48,387][INFO ][o.e.p.PluginsService     ] [vwmq4fy] loaded module [transport-netty4]
+[2017-03-11T19:34:48,388][INFO ][o.e.p.PluginsService     ] [vwmq4fy] no plugins loaded
+[2017-03-11T19:35:02,352][INFO ][o.e.n.Node               ] initialized
+[2017-03-11T19:35:02,353][INFO ][o.e.n.Node               ] [vwmq4fy] starting ...
+[2017-03-11T19:35:03,514][INFO ][o.e.t.TransportService   ] [vwmq4fy] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-03-11T19:35:06,876][INFO ][o.e.c.s.ClusterService   ] [vwmq4fy] new_master {vwmq4fy}{vwmq4fynTtSaCx9TLy_oBQ}{Zntfs0rmS02ExlKadbhwaQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-03-11T19:35:07,940][INFO ][o.e.h.HttpServer         ] [vwmq4fy] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2017-03-11T19:35:07,940][INFO ][o.e.n.Node               ] [vwmq4fy] started
+[2017-03-11T19:35:08,456][INFO ][o.e.g.GatewayService     ] [vwmq4fy] recovered [1] indices into cluster_state
+[2017-03-11T19:35:09,243][INFO ][o.e.c.r.a.AllocationService] [vwmq4fy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
