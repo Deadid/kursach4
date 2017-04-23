@@ -6,10 +6,21 @@ public class DocumentBean extends ResourceSupport {
 	
 	private String title;
 	private String content;
+	private String documentId;
 	
-	public DocumentBean(String title, String content) {
+	
+	public String getDocumentId() {
+		return documentId;
+	}
+
+	public void setDocumentId(String documentId) {
+		this.documentId = documentId;
+	}
+
+	public DocumentBean(String documentId, String title, String content) {
 		this.title = title;
 		this.content = content;
+		this.documentId = documentId;
 	}
 	
 	public String getTitle() {

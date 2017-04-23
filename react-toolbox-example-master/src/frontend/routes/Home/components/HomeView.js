@@ -1,6 +1,8 @@
 import React from 'react';
 import { List, ListItem } from 'react-toolbox/lib/list';
-import { Button } from 'react-toolbox/lib/button'; // Bundled component import
+import { Link } from 'react-router'
+
+import theme from './HomeView.css'
 
 class HomeView extends React.Component {
 
@@ -16,19 +18,12 @@ class HomeView extends React.Component {
   render () {
     return (
       <div>
-        <form action='http://localhost:8080/document/' encType='multipart/form-data' method='POST'>
-          <input type='file' name='file' />
-          <input type="text" name="title"/>
-          <Button type='submit'>Submit </Button>
-        </form>
-        <List>
+        <List selectable ripple>
           {this.props.documents.map(document => {
             return (
-              <Link to={document.get('link')}
-                key={document.get('link')}>
-                <ListItem key={document.get('link')}>
-                  {document.get('title')}
-                </ListItem>
+              <Link className={theme.link} to={`document/${document.get('id')}`}
+                key={document.get('id')}>
+                <ListItem caption={document.get('title')} key={document.get('id')} leftIcon='class' rightIcon='file_download' />
               </Link>)
           })}
         </List>

@@ -2,16 +2,18 @@
 import CoreLayout from '../layouts/CoreLayout'
 import Home from './Home'
 import Upload from './Upload'
+import Document from './Document'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
 
-export const createRoutes = (store) => ({
+export const createRoutes = () => ({
   path: '/',
   component: CoreLayout,
   indexRoute: Home,
   childRoutes: [
-    Upload
+    Upload,
+    Document
   ]
 })
 

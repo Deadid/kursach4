@@ -1,19 +1,31 @@
 import React from 'react';
-import PurpleAppBar from '../../component/PurpleAppBar';      // AppBar with simple overrides
-import SuccessButton from '../../component/SuccessButton';    // A button with complex overrides
-import { Button } from 'react-toolbox/lib/button'; // Bundled component import
+import { AppBar } from 'react-toolbox/lib/app_bar';
+import { Button } from 'react-toolbox/lib/button'
+import { Link, IndexLink } from 'react-router'
+import Navigation from 'react-toolbox/lib/navigation'
+import { Layout } from 'react-toolbox';
 
-const App = ({ children }) => (
-  <div>
-    <PurpleAppBar />
-    <section style={{ padding: 20 }}>
-      <SuccessButton label='Success' primary raised />
-      <Button label='Primary Button' primary />
-    </section>
-    <div>
-      {children}
-    </div>
-  </div>
-);
+import theme from './CoreLayout.css'
 
+class App extends React.Component {
+
+  static propTypes = {
+    children: React.PropTypes.element
+  }
+  render () {
+    return (
+    <Layout theme={theme}>
+      <AppBar leftIcon='perm_media' title='Document manager'>
+        <Navigation type="horizontal">
+          <IndexLink activeClassName={theme.active} to='/'><Button raised primary icon='collections_bookmark'>My documents</Button></IndexLink>
+          <Link activeClassName={theme.active} to='/upload'><Button raised primary icon='file_upload'>Upload documents</Button></Link>
+        </Navigation>
+      </AppBar>
+      <div className={theme.children}>
+        {this.props.children}
+      </div>
+    </Layout>
+    );
+  }
+}
 export default App;

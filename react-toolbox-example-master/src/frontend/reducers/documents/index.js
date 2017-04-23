@@ -6,7 +6,11 @@ const initialState = Immutable.fromJS({})
 export default (state = initialState, action) => {
   switch (action.type) {
     case DOCUMENTS_RETREIVED:
-      return Immutable.fromJS(action.docs)
+      let newState = initialState
+      action.docs.forEach(document => {
+        newState = newState.set(document.id, Immutable.fromJS(document))
+      })
+      return newState
     default:
       return state
   }

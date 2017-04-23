@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,10 +41,15 @@ public class DocumentController {
 	@GetMapping("/{id}")
 	public DocumentBean getById(@PathVariable String id) {
 		DocumentEntity found = dao.findOne(id);
-		DocumentBean bean = new DocumentBean(found.getTitle(), found.getContent());
+		DocumentBean bean = new DocumentBean(found.getId(), found.getTitle(), found.getContent());
 		bean.add(linkTo(methodOn(DocumentController.class).getById(id)).withSelfRel());
 
 		return bean;
+	}
+	
+	@GetMapping("/search")
+	public Page<DocumentEntity> search(@RequestParam("query") String query) {
+		return dao.findByTitle(query, new PageRequest(0, 1000));
 	}
 	
 	@GetMapping("/")
@@ -50,7 +57,7 @@ public class DocumentController {
 		List<DocumentEntity> entities = new ArrayList<>(); 
 				dao.findAll().forEach(entities::add);
 		return entities.stream().map(entity -> {
-			DocumentBean bean = new DocumentBean(entity.getTitle(), entity.getContent());
+			DocumentBean bean = new DocumentBean(entity.getId(), entity.getTitle(), entity.getContent());
 			bean.add(linkTo(methodOn(DocumentController.class).getById(entity.getId())).withSelfRel());
 			return bean;
 		}).collect(Collectors.toList());
@@ -69,7 +76,7 @@ public class DocumentController {
 		fos.close();
 		String result = null;
 		try {
-			tesseract.setLanguage("eng+rus+ukr");
+			tesseract.setLanguage("eng");
 			result = tesseract.doOCR(file);
 		} catch (TesseractException e) {
 			System.err.println(e.getMessage());
@@ -77,7 +84,7 @@ public class DocumentController {
 		saved.setTitle(title);
 		saved.setContent(result);
 		dao.save(saved);
-		DocumentBean bean = new DocumentBean(saved.getTitle(), saved.getContent());
+		DocumentBean bean = new DocumentBean(saved.getId(), saved.getTitle(), saved.getContent());
 		bean.add(linkTo(methodOn(DocumentController.class).getById(saved.getId())).withSelfRel());
 		return bean;
 	}

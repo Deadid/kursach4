@@ -1,13 +1,18 @@
 package com.smakhov.entity;
 
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
-@Document(indexName="document")
+@Document(indexName="document", type = "document")
 public class DocumentEntity {
 	
+	@Field(analyzer = "english", searchAnalyzer = "english", type = FieldType.String)
 	private String content;
+	@Field(analyzer = "english", searchAnalyzer = "english", type = FieldType.String)
 	private String title;
 	private String download;
+	
 	private String id;
 	
 	public DocumentEntity() {
@@ -59,6 +64,5 @@ public class DocumentEntity {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
 
 }
