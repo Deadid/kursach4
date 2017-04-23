@@ -27,7 +27,9 @@ class HomeView extends React.Component {
     this.setState({ searchQuery })
   }
   search () {
-    this.props.search(this.state.searchQuery)
+    if (this.state.searchQuery && this.state.searchQuery.length > 0) {
+      this.props.search(this.state.searchQuery)
+    }
   }
   render () {
     return (
