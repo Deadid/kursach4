@@ -10,3 +10,22 @@ label {
   color: #fff;
   margin: 0 5px;
 }
+.addFile{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.hidden{
+  width: 100%;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+}
+.addFile>*:last-child{margin-left: 1rem;}

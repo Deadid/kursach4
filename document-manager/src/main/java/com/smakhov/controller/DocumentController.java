@@ -47,7 +47,7 @@ public class DocumentController {
 		return bean;
 	}
 	
-	@GetMapping("/search")
+	@PostMapping("/search")
 	public Page<DocumentEntity> search(@RequestParam("query") String query) {
 		return dao.findByTitle(query, new PageRequest(0, 1000));
 	}

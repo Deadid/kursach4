@@ -1,13 +1,15 @@
 import { connect } from 'react-redux'
 
-import { uploadDocument } from '../../../actions/rest'
+import { addDocument } from '../../../actions/rest'
 import UploadView from '../components/UploadView'
 
 const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  uploadDocument: () => dispatch(uploadDocument())
+  uploadDocument: (data) => {
+    return dispatch(addDocument(data))
+  }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UploadView)
