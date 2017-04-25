@@ -1,6 +1,7 @@
 {
   "name": "document-manager",
   "description": "",
+  "author": "smakhov",
   "version": "0.1.0",
   "engines": {
     "node": ">=4.3.0",
