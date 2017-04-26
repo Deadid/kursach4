@@ -32,3 +32,15 @@ export function addDocument (data) {
     })
   }
 }
+export function deleteDocument (data) {
+  return (dispatch) => {
+    RestService.deleteDocument(data)
+      .then(() => {
+        browserHistory.push('/')
+        dispatch({
+        type: actionTypes.DOCUMENT_DELETED,
+        id: data.id
+      })
+    })
+  }
+}

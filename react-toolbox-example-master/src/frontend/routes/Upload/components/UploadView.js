@@ -35,11 +35,11 @@ class UploadView extends React.Component {
       <form className={theme.addDocument} onSubmit={this.onSubmit}>
         <div className={theme.addFile}>
           <input type='file' name='file' className={theme.hidden} onChange={this.onFileChange}/>
-          <Button icon='folder' primary raised>Select file</Button>
-          <Input label='Filename' disabled type="text" name="title" value={this.state.filename} />
+          <Button icon='folder' primary raised>Обрати файл</Button>
+          <Input label='Файл' disabled type="text" name="title" value={this.state.filename} />
         </div>
-        <Input label='Title' type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
-        <Button icon='save' type='submit' primary raised>Submit </Button>
+        <Input label='Назва' type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
+        <Button icon='save' type='submit' primary raised>Завантажити</Button>
       </form>
     )
   }

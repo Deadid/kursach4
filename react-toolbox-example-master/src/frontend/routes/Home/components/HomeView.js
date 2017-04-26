@@ -35,7 +35,7 @@ class HomeView extends React.Component {
     return (
       <div>
         <div className={theme.search}>
-          <Input label="Search" value={this.state.searchQuery} onChange={this.onChange} />
+          <Input label="Пошук" value={this.state.searchQuery} onChange={this.onChange} />
           <Button icon='search' onClick={this.search} raised primary/>
         </div>
         <List selectable ripple>

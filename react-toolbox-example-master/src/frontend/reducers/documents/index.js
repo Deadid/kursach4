@@ -1,4 +1,4 @@
-import { DOCUMENTS_RETREIVED, DOCUMENT_ADDED } from '../../constants/action.types'
+import { DOCUMENTS_RETREIVED, DOCUMENT_ADDED, DOCUMENT_DELETED } from '../../constants/action.types'
 
 import Immutable from 'immutable'
 
@@ -12,7 +12,9 @@ export default (state = initialState, action) => {
       })
       return newState
     case DOCUMENT_ADDED:
-    return state.set(action.doc.id, Immutable.fromJS(action.doc))
+      return state.set(action.doc.id, Immutable.fromJS(action.doc))
+    case DOCUMENT_DELETED:
+      return state.delete(action.id)
     default:
       return state
   }

@@ -12,6 +12,9 @@ class RestService {
 
       })
   }
+  deleteDocument ({id}) {
+    return fetch(`http://localhost:8080/document/${id}`, { method: 'DELETE' })
+  }
   searchDocuments (query) {
     const formData = new FormData()
     formData.append('query', query)

@@ -6,6 +6,7 @@ import {Button} from 'react-toolbox/lib/button';
 class DocumentView extends React.Component {
 
   static propTypes = {
+    delete: React.PropTypes.func,
     document: React.PropTypes.object
   }
 
@@ -22,8 +23,7 @@ class DocumentView extends React.Component {
           </div>
         </CardText>
         <CardActions>
-          <Button icon='file_download' label="Download" primary />
-          <Button icon='delete_forever' label="Delete" accent />
+          <Button icon='delete_forever' label="Видалити" accent onClick={this.props.delete} />
         </CardActions>
       </Card>
     )
