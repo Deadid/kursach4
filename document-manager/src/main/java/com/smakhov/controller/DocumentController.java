@@ -8,8 +8,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.databind.MappingIterator;
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -94,6 +98,16 @@ public class DocumentController {
 		bean.add(linkTo(methodOn(DocumentController.class).getById(saved.getId())).withSelfRel());
 		return bean;
 	}
-	
+
+	@PostMapping("/judges")
+	public List<Map<String, String>> uploadJudges(@RequestParam("file") MultipartFile multipartFile) throws IOException {
+		CsvMapper mapper = new CsvMapper();
+		CsvSchema schema = CsvSchema.emptySchema().withHeader().withColumnSeparator('\t');
+		MappingIterator<Map<String,String>> it = mapper.readerFor(Map.class)
+				.with(schema)
+				.readValues(multipartFile.getInputStream());
+		return it.readAll();
+
+	}
 	
 }
