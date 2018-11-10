@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smakhov.dao.DocumentDao;
+import com.smakhov.dao.elasticsearch.ElasticsearchDocumentDao;
 
 @RestController
 @RequestMapping("/file")
@@ -21,7 +21,7 @@ import com.smakhov.dao.DocumentDao;
 public class FileController {
 	
 	@Autowired
-	private DocumentDao dao; 
+	private ElasticsearchDocumentDao dao;
 	
 	@GetMapping("/{id}")
 	public void getFile(@PathVariable("id") String id, HttpServletResponse response) {

@@ -1,68 +1,108 @@
 package com.smakhov.entity;
 
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
+import javax.persistence.*;
+import java.util.Objects;
 
-@Document(indexName="document", type = "document")
+@Entity
+@Table(name = "document")
 public class DocumentEntity {
-	
-	@Field(analyzer = "english", searchAnalyzer = "english", type = FieldType.String)
-	private String content;
-	@Field(analyzer = "english", searchAnalyzer = "english", type = FieldType.String)
-	private String title;
-	private String download;
-	
-	private String id;
-	
-	public DocumentEntity() {
-	}
+    @Id
+    @Column(name = "doc_id")
+    private String id;
 
-	public DocumentEntity(String title, String content) {
-		this.title = title;
-		this.content = content;
-	}
+    @ManyToOne
+    @JoinColumn(name = "court_code")
+    private Court court;
 
-	public DocumentEntity(String id, String title, String content) {
-		this.id = id;
-		this.title = title;
-		this.content = content;
-	}
+    @ManyToOne
+    @JoinColumn(name = "judgment_code")
+    private Judgment judgment;
 
-	public DocumentEntity(String id, String title, String content, String download) {
-		this.id = id;
-		this.title = title;
-		this.content = content;
-		this.download = download;
-	}
+    @ManyToOne
+    @JoinColumn(name = "justice_kind")
+    private JusticeKind justiceKind;
 
-	public String getContent() {
-		return content;
-	}
+    @ManyToOne
+    @JoinColumn(name = "category_code")
+    private Category category;
 
-	public String getDownload() {
-		return download;
-	}
-	
-	public String getId() {
-		return id;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public void setDownload(String download) {
-		this.download = download;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+    @Column
+    private Boolean indexed;
 
-	public String getTitle() {
-		return title;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
+    public Court getCourt() {
+        return court;
+    }
+
+    public void setCourt(Court court) {
+        this.court = court;
+    }
+
+    public Judgment getJudgment() {
+        return judgment;
+    }
+
+    public void setJudgment(Judgment judgment) {
+        this.judgment = judgment;
+    }
+
+    public JusticeKind getJusticeKind() {
+        return justiceKind;
+    }
+
+    public void setJusticeKind(JusticeKind justiceKind) {
+        this.justiceKind = justiceKind;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Boolean getIndexed() {
+        return indexed;
+    }
+
+    public void setIndexed(Boolean indexed) {
+        this.indexed = indexed;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DocumentEntity that = (DocumentEntity) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(court, that.court) &&
+                Objects.equals(judgment, that.judgment) &&
+                Objects.equals(justiceKind, that.justiceKind) &&
+                Objects.equals(category, that.category);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, court, judgment, justiceKind, category);
+    }
+
+    @Override
+    public String toString() {
+        return "DocumentEntity{" +
+                "id='" + id + '\'' +
+                ", court=" + court +
+                ", judgment=" + judgment +
+                ", justiceKind=" + justiceKind +
+                ", category=" + category +
+                '}';
+    }
 }

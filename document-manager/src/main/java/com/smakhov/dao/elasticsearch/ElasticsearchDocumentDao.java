@@ -1,4 +1,4 @@
-package com.smakhov.dao;
+package com.smakhov.dao.elasticsearch;
 
 
 import org.springframework.data.domain.Page;
@@ -7,11 +7,11 @@ import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
-import com.smakhov.entity.DocumentEntity;
+import com.smakhov.entity.ElasticsearchDocumentEntity;
 
 @Repository
-public interface DocumentDao extends ElasticsearchRepository<DocumentEntity, String> {
+public interface ElasticsearchDocumentDao extends ElasticsearchRepository<ElasticsearchDocumentEntity, String> {
 	
 	@Query("{\"query\":{\"bool\":{\"should\": [{ \"match\": { \"title\": {\"query\": \"?0\", \"fuzziness\": \"AUTO\"}}}, { \"match\": { \"content\":{\"query\": \"?0\", \"fuzziness\": \"AUTO\"}}}]}}}")
-    Page<DocumentEntity> findByTitle(String title, Pageable pageable);
+    Page<ElasticsearchDocumentEntity> findByTitle(String title, Pageable pageable);
 }

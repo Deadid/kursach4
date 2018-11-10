@@ -27,9 +27,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.smakhov.dao.DocumentDao;
+import com.smakhov.dao.elasticsearch.ElasticsearchDocumentDao;
 import com.smakhov.dto.DocumentBean;
-import com.smakhov.entity.DocumentEntity;
+import com.smakhov.entity.ElasticsearchDocumentEntity;
 
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
@@ -41,11 +41,11 @@ import net.sourceforge.tess4j.TesseractException;
 public class DocumentController {
 	
 	@Autowired
-	private DocumentDao dao;
+	private ElasticsearchDocumentDao dao;
 
 	@GetMapping("/{id}")
 	public DocumentBean getById(@PathVariable String id) {
-		DocumentEntity found = dao.findOne(id);
+		ElasticsearchDocumentEntity found = dao.findOne(id);
 		DocumentBean bean = new DocumentBean(found.getId(), found.getTitle(), found.getContent());
 		bean.add(linkTo(methodOn(DocumentController.class).getById(id)).withSelfRel());
 
@@ -58,13 +58,13 @@ public class DocumentController {
 	}
 	
 	@PostMapping("/search")
-	public Page<DocumentEntity> search(@RequestParam("query") String query) {
+	public Page<ElasticsearchDocumentEntity> search(@RequestParam("query") String query) {
 		return dao.findByTitle(query, new PageRequest(0, 1000));
 	}
 	
 	@GetMapping("/")
 	public List<DocumentBean> findAll() {
-		List<DocumentEntity> entities = new ArrayList<>(); 
+		List<ElasticsearchDocumentEntity> entities = new ArrayList<>();
 				dao.findAll().forEach(entities::add);
 		return entities.stream().map(entity -> {
 			DocumentBean bean = new DocumentBean(entity.getId(), entity.getTitle(), entity.getContent());
@@ -77,7 +77,7 @@ public class DocumentController {
 	public DocumentBean handleFileUpload(@RequestParam("title") String title, @RequestParam("file") MultipartFile multipartFile)
 			throws IllegalStateException, IOException {
 		ITesseract tesseract = new Tesseract();
-		DocumentEntity saved = dao.save(new DocumentEntity());
+		ElasticsearchDocumentEntity saved = dao.save(new ElasticsearchDocumentEntity());
 		saved.setDownload((saved.getId() + multipartFile.getOriginalFilename()));
 		File file = new File(saved.getDownload());
 		file.createNewFile();
