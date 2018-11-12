@@ -1,6 +1,10 @@
 package com.smakhov.entity;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 import javax.persistence.*;
+import java.net.URL;
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
@@ -22,9 +26,19 @@ public class DocumentEntity {
     @JoinColumn(name = "justice_kind")
     private JusticeKind justiceKind;
 
+    @Column(name = "cause_num")
+    private String causeNumber;
+
     @ManyToOne
     @JoinColumn(name = "category_code")
     private Category category;
+
+
+    @Column
+    private String judge;
+
+    @Column(name = "doc_url")
+    private String docUrl;
 
     @Column
     private Boolean indexed;
@@ -77,6 +91,33 @@ public class DocumentEntity {
         this.indexed = indexed;
     }
 
+    public String getCauseNumber() {
+        return causeNumber;
+    }
+
+    public void setCauseNumber(String causeNumber) {
+        this.causeNumber = causeNumber;
+    }
+
+
+
+    public String getJudge() {
+        return judge;
+    }
+
+    public void setJudge(String judge) {
+        this.judge = judge;
+    }
+
+    public String getDocUrl() {
+        return docUrl;
+    }
+
+    public void setDocUrl(String docUrl) {
+        this.docUrl = docUrl;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -102,7 +143,12 @@ public class DocumentEntity {
                 ", court=" + court +
                 ", judgment=" + judgment +
                 ", justiceKind=" + justiceKind +
+                ", causeNumber='" + causeNumber + '\'' +
                 ", category=" + category +
+                ", judge='" + judge + '\'' +
+                ", docUrl=" + docUrl +
+
+                ", indexed=" + indexed +
                 '}';
     }
 }

@@ -4,8 +4,8 @@ import org.springframework.hateoas.ResourceSupport;
 
 public class DocumentBean extends ResourceSupport {
 	
-	private String title;
-	private String content;
+	private String justiceKind;
+	private String causeNum;
 	private String documentId;
 	
 	
@@ -17,26 +17,26 @@ public class DocumentBean extends ResourceSupport {
 		this.documentId = documentId;
 	}
 
-	public DocumentBean(String documentId, String title, String content) {
-		this.title = title;
-		this.content = content;
+	public DocumentBean(String documentId, String justiceKind, String causeNum) {
+		this.justiceKind = justiceKind;
+		this.causeNum = causeNum;
 		this.documentId = documentId;
 	}
 	
-	public String getTitle() {
-		return title;
+	public String getJusticeKind() {
+		return justiceKind;
 	}
 
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setJusticeKind(String justiceKind) {
+		this.justiceKind = justiceKind;
 	}
 
 
-	public String getContent() {
-		return content;
+	public String getCauseNum() {
+		return causeNum;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setCauseNum(String causeNum) {
+		this.causeNum = causeNum;
 	}
 }

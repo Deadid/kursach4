@@ -7,62 +7,44 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @Document(indexName="document", type = "document")
 public class ElasticsearchDocumentEntity {
 	
-	@Field(analyzer = "english", searchAnalyzer = "english", type = FieldType.String)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.String)
 	private String content;
-	@Field(analyzer = "english", searchAnalyzer = "english", type = FieldType.String)
-	private String title;
-	private String download;
-	
+
 	private String id;
 	
 	public ElasticsearchDocumentEntity() {
 	}
 
-	public ElasticsearchDocumentEntity(String title, String content) {
-		this.title = title;
+	public ElasticsearchDocumentEntity( String content) {
 		this.content = content;
 	}
 
-	public ElasticsearchDocumentEntity(String id, String title, String content) {
+	public ElasticsearchDocumentEntity(String id, String content) {
 		this.id = id;
-		this.title = title;
 		this.content = content;
 	}
 
-	public ElasticsearchDocumentEntity(String id, String title, String content, String download) {
-		this.id = id;
-		this.title = title;
-		this.content = content;
-		this.download = download;
-	}
 
 	public String getContent() {
 		return content;
 	}
 
-	public String getDownload() {
-		return download;
-	}
-	
+
 	public String getId() {
 		return id;
 	}
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public void setDownload(String download) {
-		this.download = download;
-	}
 	public void setId(String id) {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	@Override
+	public String toString() {
+		return "ElasticsearchDocumentEntity{" +
+				"content='" + content + '\'' +
+				", id='" + id + '\'' +
+				'}';
 	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 }

@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
+import com.smakhov.dao.elasticsearch.DocumentDao;
+import com.smakhov.entity.DocumentEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -39,14 +41,20 @@ import net.sourceforge.tess4j.TesseractException;
 @RequestMapping("/document")
 @CrossOrigin(origins = "*")
 public class DocumentController {
-	
-	@Autowired
-	private ElasticsearchDocumentDao dao;
+
+	private final ElasticsearchDocumentDao elasticsearchDocumentDao;
+	private final DocumentDao documentDao;
+
+	public DocumentController(ElasticsearchDocumentDao elasticsearchDocumentDao, DocumentDao documentDao) {
+		this.elasticsearchDocumentDao = elasticsearchDocumentDao;
+		this.documentDao = documentDao;
+	}
 
 	@GetMapping("/{id}")
 	public DocumentBean getById(@PathVariable String id) {
-		ElasticsearchDocumentEntity found = dao.findOne(id);
-		DocumentBean bean = new DocumentBean(found.getId(), found.getTitle(), found.getContent());
+
+		DocumentEntity found = documentDao.findOne(id);
+		DocumentBean bean = new DocumentBean(found.getId(), found.getJusticeKind().getName(), found.getCauseNumber());
 		bean.add(linkTo(methodOn(DocumentController.class).getById(id)).withSelfRel());
 
 		return bean;
@@ -54,60 +62,24 @@ public class DocumentController {
 	
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable String id) {
-		dao.delete(id);
+		elasticsearchDocumentDao.delete(id);
 	}
 	
 	@PostMapping("/search")
 	public Page<ElasticsearchDocumentEntity> search(@RequestParam("query") String query) {
-		return dao.findByTitle(query, new PageRequest(0, 1000));
+		return elasticsearchDocumentDao.findByTitle(query, new PageRequest(0, 1000));
 	}
 	
 	@GetMapping("/")
 	public List<DocumentBean> findAll() {
 		List<ElasticsearchDocumentEntity> entities = new ArrayList<>();
-				dao.findAll().forEach(entities::add);
+				elasticsearchDocumentDao.findAll().forEach(entities::add);
 		return entities.stream().map(entity -> {
-			DocumentBean bean = new DocumentBean(entity.getId(), entity.getTitle(), entity.getContent());
+			DocumentBean bean = new DocumentBean(entity.getId(), entity.getId(), entity.getContent());
 			bean.add(linkTo(methodOn(DocumentController.class).getById(entity.getId())).withSelfRel());
 			return bean;
 		}).collect(Collectors.toList());
 	}
 
-	@PostMapping("/")
-	public DocumentBean handleFileUpload(@RequestParam("title") String title, @RequestParam("file") MultipartFile multipartFile)
-			throws IllegalStateException, IOException {
-		ITesseract tesseract = new Tesseract();
-		ElasticsearchDocumentEntity saved = dao.save(new ElasticsearchDocumentEntity());
-		saved.setDownload((saved.getId() + multipartFile.getOriginalFilename()));
-		File file = new File(saved.getDownload());
-		file.createNewFile();
-		FileOutputStream fos = new FileOutputStream(file);
-		fos.write(multipartFile.getBytes());
-		fos.close();
-		String result = null;
-		try {
-			tesseract.setLanguage("eng");
-			result = tesseract.doOCR(file);
-		} catch (TesseractException e) {
-			System.err.println(e.getMessage());
-		}
-		saved.setTitle(title);
-		saved.setContent(result);
-		dao.save(saved);
-		DocumentBean bean = new DocumentBean(saved.getId(), saved.getTitle(), saved.getContent());
-		bean.add(linkTo(methodOn(DocumentController.class).getById(saved.getId())).withSelfRel());
-		return bean;
-	}
-
-	@PostMapping("/judges")
-	public List<Map<String, String>> uploadJudges(@RequestParam("file") MultipartFile multipartFile) throws IOException {
-		CsvMapper mapper = new CsvMapper();
-		CsvSchema schema = CsvSchema.emptySchema().withHeader().withColumnSeparator('\t');
-		MappingIterator<Map<String,String>> it = mapper.readerFor(Map.class)
-				.with(schema)
-				.readValues(multipartFile.getInputStream());
-		return it.readAll();
-
-	}
 	
 }

@@ -23,7 +23,7 @@ public class FileController {
 	@Autowired
 	private ElasticsearchDocumentDao dao;
 	
-	@GetMapping("/{id}")
+/*	@GetMapping("/{id}")
 	public void getFile(@PathVariable("id") String id, HttpServletResponse response) {
 		String filename = dao.findOne(id).getDownload();
 		try {
@@ -35,5 +35,5 @@ public class FileController {
 		    } catch (IOException ex) {
 		      throw new RuntimeException("IOError writing file to output stream");
 		    }
-	}
+	}*/
 }

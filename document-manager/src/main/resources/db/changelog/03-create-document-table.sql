@@ -6,10 +6,10 @@ CREATE TABLE "document" (
   justice_kind VARCHAR(255) REFERENCES justice_kind(justice_kind),
   category_code	VARCHAR(255) REFERENCES cause_category(category_code),
   cause_num	VARCHAR(255),
-  adjudication_date TIMESTAMP WITH TIME ZONE,
-  receipt_date TIMESTAMP WITH TIME ZONE,
+  adjudication_date date,
+  receipt_date date,
   judge	TEXT,
   doc_url	TEXT,
   status BIGINT NOT NULL,
-  date_publ TIMESTAMP WITH TIME ZONE
+  date_publ date
 );
