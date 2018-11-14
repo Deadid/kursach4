@@ -1,10 +1,7 @@
 package com.smakhov.entity;
 
-import org.hibernate.validator.constraints.br.CPF;
-
 import javax.persistence.*;
-import java.net.URL;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -33,12 +30,18 @@ public class DocumentEntity {
     @JoinColumn(name = "category_code")
     private Category category;
 
-
     @Column
     private String judge;
 
     @Column(name = "doc_url")
     private String docUrl;
+
+    @Column(name = "adjudication_date")
+    private Date adjudicationDate;
+
+    @Column(name = "receipt_date")
+    private Date receiptDate;
+
 
     @Column
     private Boolean indexed;
@@ -99,7 +102,21 @@ public class DocumentEntity {
         this.causeNumber = causeNumber;
     }
 
+    public Date getAdjudicationDate() {
+        return adjudicationDate;
+    }
 
+    public void setAdjudicationDate(Date adjudicationDate) {
+        this.adjudicationDate = adjudicationDate;
+    }
+
+    public Date getReceiptDate() {
+        return receiptDate;
+    }
+
+    public void setReceiptDate(Date receiptDate) {
+        this.receiptDate = receiptDate;
+    }
 
     public String getJudge() {
         return judge;
