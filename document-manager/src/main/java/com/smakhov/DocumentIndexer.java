@@ -36,8 +36,10 @@ public class DocumentIndexer implements ApplicationListener<ApplicationReadyEven
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         boolean hasNext = true;
         int page = 0;
-        do {
-            Page<DocumentEntity> notIndexed = dao.findByIndexedFalse(PageRequest.of(page, 100));
+        Page<DocumentEntity> notIndexed = dao.findByIndexedFalse(PageRequest.of(0, 500));
+        hasNext = notIndexed.hasNext();
+        while (hasNext) {
+
             List<ElasticsearchDocumentEntity> elasticSearchDocuments = notIndexed.getContent().parallelStream().map(documentEntity -> {
 
                 String content = contentExtractor.extractContent(documentEntity.getDocUrl());
@@ -61,8 +63,9 @@ public class DocumentIndexer implements ApplicationListener<ApplicationReadyEven
             List<DocumentEntity> documents = notIndexed.getContent();
             documents.forEach(documentEntity -> documentEntity.setIndexed(true));
             dao.saveAll(documents);
-        } while (hasNext);
-
+            notIndexed = dao.findByIndexedFalse(PageRequest.of(0, 500));
+        }
+        LOG.info("Indexing complete");
     }
 
 }

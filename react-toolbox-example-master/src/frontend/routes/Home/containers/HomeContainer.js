@@ -1,4 +1,4 @@
-import { retreiveDocuments, searchDocuments } from '../../../actions/rest'
+import {searchDocuments } from '../../../actions/rest'
 import HomeView from '../components/HomeView'
 
 import { connect } from 'react-redux'
@@ -8,7 +8,6 @@ const mapStateToProps = (store) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  retreiveDocuments: () => dispatch(retreiveDocuments()),
   search: (query) => dispatch(searchDocuments(query))
 })
 

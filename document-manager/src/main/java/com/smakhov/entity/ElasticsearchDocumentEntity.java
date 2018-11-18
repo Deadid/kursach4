@@ -8,7 +8,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import java.util.Date;
 
 
-@Document(indexName="document", type = "document")
+@Document(indexName="newdocument", type = "document")
 public class ElasticsearchDocumentEntity {
 
 	private String id;
@@ -16,22 +16,22 @@ public class ElasticsearchDocumentEntity {
 	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
 	private String content;
 
-	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Keyword)
 	private String court;
 
-	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Keyword)
 	private String judge;
 
-	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Keyword)
 	private String justiceKind;
 
-	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Keyword)
 	private String causeNumber;
 
-	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Keyword)
 	private String category;
 
-	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Text)
+	@Field(analyzer = "ukrainian", searchAnalyzer = "ukrainian", type = FieldType.Keyword)
 	private String judgment;
 
 	@Field(type = FieldType.Date, store = true)

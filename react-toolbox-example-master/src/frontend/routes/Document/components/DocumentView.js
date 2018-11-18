@@ -22,9 +22,6 @@ class DocumentView extends React.Component {
             {this.props.document.get('content')}
           </div>
         </CardText>
-        <CardActions>
-          <Button icon='delete_forever' label="Видалити" accent onClick={this.props.delete} />
-        </CardActions>
       </Card>
     )
   }

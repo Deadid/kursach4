@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
 import documentsReducer from '../reducers/documents'
+import searchReducer from '../reducers/search'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
     documents: documentsReducer,
+    search: searchReducer,
     ...asyncReducers
   })
 }

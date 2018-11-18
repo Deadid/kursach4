@@ -2,12 +2,14 @@ package com.smakhov.dao.elasticsearch;
 
 import com.rtfparserkit.converter.text.StringTextConverter;
 import com.rtfparserkit.parser.RtfStreamSource;
+import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.springframework.stereotype.Component;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.NoSuchElementException;
 
 @Component
 public class ContentExtractor {
@@ -34,6 +36,8 @@ public class ContentExtractor {
 
     try {
       return Jsoup.connect(docUrl).execute().parse().body().text();
+    } catch (HttpStatusException e) {
+      return "FILE NOT FOUND";
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
@@ -47,6 +51,8 @@ public class ContentExtractor {
       return "FILE NOT FOUND";
     } catch (IOException e) {
       throw new RuntimeException(e);
+    } catch (NoSuchElementException e) {
+      return "INVALID RTF";
     }
     return converter.getText();
   }

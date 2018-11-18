@@ -15,12 +15,7 @@ class App extends React.Component {
   render () {
     return (
     <Layout theme={theme}>
-      <AppBar leftIcon='perm_media' title='Організатор документів'>
-        <Navigation type="horizontal">
-          <IndexLink activeClassName={theme.active} to='/'><Button raised primary icon='collections_bookmark'>Мої документи</Button></IndexLink>
-          <Link activeClassName={theme.active} to='/upload'><Button raised primary icon='file_upload'>Завантажити документ</Button></Link>
-        </Navigation>
-      </AppBar>
+      <AppBar leftIcon='perm_media' title='Реєстр судових рішень' />
       <div className={theme.children}>
         {this.props.children}
       </div>

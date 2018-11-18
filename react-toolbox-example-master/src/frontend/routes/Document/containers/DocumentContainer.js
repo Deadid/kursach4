@@ -8,7 +8,6 @@ const mapStateToProps = (store, props) => ({
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-  delete: () => dispatch(deleteDocument({id: props.params.id}))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(DocumentView)

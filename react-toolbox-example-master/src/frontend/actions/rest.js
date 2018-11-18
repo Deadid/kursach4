@@ -14,9 +14,10 @@ export function retreiveDocuments () {
 export function searchDocuments (query) {
   return (dispatch) => {
     RestService.searchDocuments(query)
-    .then(documents => dispatch({
+    .then(response => dispatch({
       type: actionTypes.DOCUMENTS_RETREIVED,
-      docs: documents
+      docs: response.content,
+      searchInfo: response
     }))
   }
 }
