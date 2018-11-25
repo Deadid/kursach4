@@ -94,7 +94,7 @@ class HomeView extends React.Component {
   formValid() {
     let valid = false;
     Object.keys(this.state.formData).map((item) => {
-      if (this.state.formData[item].length > 0) {
+      if (this.state.formData[item] != null) {
         valid = true;
       }
     });
@@ -103,13 +103,13 @@ class HomeView extends React.Component {
   // onChange input. Where event is typed text, type - name of input
   changeInput(event, type) {
     let stateItem = { ...this.state };
-    stateItem.formData[type] = event;
+    stateItem.formData[type] = event === "" ? null : event;
     this.setState(stateItem);
   }
   // onChange select. Where event is choosen option, type - name of select
   changeSelect(event, type) {
     let stateItem = { ...this.state };
-    stateItem.formData[type] = event.target.value;
+    stateItem.formData[type] = event.target.value === "Обрати" ? null : event.target.value;
     this.setState(stateItem);
   }
   // onChange DatePicker. Where event is choosen data, type - key in this state.
@@ -159,16 +159,6 @@ class HomeView extends React.Component {
                 })}
               </Select>
             </div>
-            <div>
-              <Select name="region" value="Регіон суду" changeSelect={(event) => this.changeSelect(event, 'region')} value={this.state.formData.region}>
-                <option value={null}>Обрати</option>
-                {regionList.map((region) => {
-                  return (
-                    <option value={region.name}>{region.name}</option>
-                  )
-                })}
-              </Select>
-            </div>
             <div><Select name="Court" value="Суд" changeSelect={(event) => this.changeSelect(event, 'court')} value={this.state.formData.court}>
               <option value={null}>Обрати</option>
               {courtsList.map((court, index) => {
@@ -199,12 +189,12 @@ class HomeView extends React.Component {
             <h4>Дата надходження</h4>
             <div className={theme.searchElement}>
               <div className={theme.formElem}>
-                <DatePicker label="Від" locale='ua' onChange={(date) => this.changeDate(date, 'receiptDate_from')}
-                  maxDate={this.state.formData.receiptDate_to} value={this.state.formData.receiptDate_from} />
+                <DatePicker label="Від" inputFormat={(value) => `${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`} onChange={(date) => this.changeDate(date, 'receiptDateFrom')}
+                  maxDate={this.state.formData.receiptDateTo} value={this.state.formData.receiptDateFrom} />
               </div>
               <div className={theme.formElem}>
-                <DatePicker label="До" locale='ua' onChange={(date) => this.changeDate(date, 'receiptDate_to')}
-                  minDate={this.state.formData.receiptDate_from} value={this.state.formData.receiptDate_to} />
+                <DatePicker label="До" inputFormat={(value) => `${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`}onChange={(date) => this.changeDate(date, 'receiptDateTo')}
+                  minDate={this.state.formData.receiptDateFrom} value={this.state.formData.receiptDateTo} />
               </div>
             </div>
           </div>
@@ -213,12 +203,12 @@ class HomeView extends React.Component {
             <h4>Дата ухвали</h4>
             <div className={theme.searchElement}>
               <div className={theme.formElem}>
-                <DatePicker label="Від" locale='ua' onChange={(date) => this.changeDate(date, 'adjudicationDate_from')}
-                  maxDate={this.state.adjudicationDate_to} value={this.state.adjudicationDate_from} />
+                <DatePicker label="Від" inputFormat={(value) => `${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`} onChange={(date) => this.changeDate(date, 'adjudicationDateFrom')}
+                  maxDate={this.state.formData.adjudicationDateTo} value={this.state.formData.adjudicationDateFrom} />
               </div>
               <div className={theme.formElem}>
-                <DatePicker label="До" locale='ua' onChange={(date) => this.changeDate(date, 'adjudicationDate_to')}
-                  minDate={this.state.adjudicationDate_from} value={this.state.adjudicationDate_to} />
+                <DatePicker  label="До" inputFormat={(value) => `${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`} onChange={(date) => this.changeDate(date, 'adjudicationDateTo')}
+                  minDate={this.state.formData.adjudicationDateFrom} value={this.state.formData.adjudicationDateTo} />
               </div>
             </div>
           </div>
