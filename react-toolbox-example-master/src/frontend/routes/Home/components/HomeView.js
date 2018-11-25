@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, ListItem } from 'react-toolbox/lib/list';
-import Table, {TableCell, TableHead, TableRow} from 'react-toolbox/lib/table';
+import Table, { TableCell, TableHead, TableRow } from 'react-toolbox/lib/table';
 import { Input } from 'react-toolbox/lib/input';
 import { DatePicker } from 'react-toolbox/lib/date_picker';
 import Select from '../../../generic_components/Select';
@@ -11,6 +11,10 @@ import Pagination from '../../../generic_components/Pagination';
 import theme from './HomeView.css'
 
 import courtsList from '../../../test_jsons/courts.json'; // remove it when request will work
+import justiceKinds from '../../../test_jsons/justice_kinds.json'; // remove it when request will work
+import regionList from '../../../test_jsons/regions.json'; // remove it when request will work
+import causeCategories from '../../../test_jsons/cause_categories.json'; // remove it when request will work
+import judgmentForms from '../../../test_jsons/judgment_forms.json'; // remove it when request will work
 
 class HomeView extends React.Component {
 
@@ -21,23 +25,49 @@ class HomeView extends React.Component {
   }
 
   // load data for courts select
-  loadCourtSelectOptions () {
-    fetch('/test_jsons/courts.json')
-      .then(response => response.json())
-      .then(data => this.setState({
-          courtsList: data
-        })
-      )
-      .catch(() => {
-        console.log(`fetch failed. Create data from "import"`);
-        this.setState({
-          courtsList: courtsList
-        });
-      })
+  loadCourtSelectOptions() {
+    this.setState({
+      courtsList: courtsList
+    });
+
   }
 
-  componentDidMount () {
+  // load data for justice kinds select
+  loadJusticeKindSelectOptions() {
+    this.setState({
+      justiceKinds: justiceKinds
+    });
+
+  }
+
+  // load data for regions select
+  loadRegionSelectOptions() {
+    this.setState({
+      regionList: regionList
+    });
+  }
+
+  // load data for Judgment forms select
+  loadJudgmentFormsSelectOptions() {
+    this.setState({
+      judgmentForms: judgmentForms
+    });
+  }
+
+  // load data for cause categories select
+  loadCauseCategoriesSelectOptions() {
+    this.setState({
+      causeCategories: causeCategories
+    });
+  }
+
+
+  componentDidMount() {
     this.loadCourtSelectOptions()
+    this.loadCauseCategoriesSelectOptions();
+    this.loadRegionSelectOptions();
+    this.loadJudgmentFormsSelectOptions();
+    this.loadJusticeKindSelectOptions();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -73,22 +103,22 @@ class HomeView extends React.Component {
     }
   }
 
-  constructor () {
+  constructor() {
     super()
     this.state = {
       formData: {}
     }
-    this.search = ::this.search
-    this.changePage = ::this.changePage
+    this.search = :: this.search
+    this.changePage = :: this.changePage
   }
 
-  search () {
+  search() {
     if (this.formValid()) {
       this.props.search(this.state.formData)
     }
   }
   // check is at least one field is not empty
-  formValid () {
+  formValid() {
     let valid = false;
     Object.keys(this.state.formData).map((item) => {
       if (this.state.formData[item].length > 0) {
@@ -98,30 +128,30 @@ class HomeView extends React.Component {
     return valid;
   }
   // onChange input. Where event is typed text, type - name of input
-  changeInput (event, type) {
-    let stateItem = {...this.state};
+  changeInput(event, type) {
+    let stateItem = { ...this.state };
     stateItem.formData[type] = event;
     this.setState(stateItem);
   }
   // onChange select. Where event is choosen option, type - name of select
-  changeSelect (event, type) {
-    let stateItem = {...this.state};
+  changeSelect(event, type) {
+    let stateItem = { ...this.state };
     stateItem.formData[type] = event.target.value;
     this.setState(stateItem);
   }
   // onChange DatePicker. Where event is choosen data, type - key in this state.
-  changeDate (date, type) {
-    let stateItem = {...this.state};
+  changeDate(date, type) {
+    let stateItem = { ...this.state };
     stateItem.formData[type] = date;
     this.setState(stateItem);
   }
-  changePage (pageIndex) {
-    this.setState({activePage: pageIndex});
+  changePage(pageIndex) {
+    this.setState({ activePage: pageIndex });
   }
-  
-  render () {
 
-    const {courtsList = []} = this.state;
+  render() {
+
+    const { courtsList = [], regionList = [], causeCategories = [], judgmentForms = [] } = this.state;
 
     const renderList = this.state.mainList && this.state.mainList[this.state.activePage].map((item, idx) => {
       return (
@@ -134,6 +164,7 @@ class HomeView extends React.Component {
           <TableCell>{item.justiceKind}</TableCell>
           <TableCell>{item.receiptDate}</TableCell>
           <TableCell>{item.adjudicationDate}</TableCell>
+          <TableCell><Link className={theme.link} to={`/document/${item.id}`}>Відкрити</Link></TableCell>
         </TableRow>
       )
     });
@@ -142,49 +173,84 @@ class HomeView extends React.Component {
         <div className={theme.search}>
 
           <div className={theme.topForm}>
-            {/* <Input label="Пошук" value={this.state.searchQuery} onChange={this.onChange} /> */}
+            <Input label="Вміст" value={this.state.searchQuery} onChange={(event) => this.changeInput(event, "content")} />
             <Input label="Суддя" name="judge" onChange={(event) => this.changeInput(event, 'judge')} />
             <Input label="Номер справи" name="case number" onChange={(event) => this.changeInput(event, 'caseNumber')} />
-            <Select name="Court" value="Виберіть суд" changeSelect={(event) => this.changeSelect(event, 'court')} value={this.state.formData.court}>
+            <div>
+              <Select name="causeCategory" value="Категорія справи" changeSelect={(event) => this.changeSelect(event, 'causeCategory')} value={this.state.formData.causeCategory}>
+                <option value={null}>Обрати</option>
+                {causeCategories.map((causeCategory) => {
+                  return (
+                    <option value={causeCategory.name}>{causeCategory.name}</option>
+                  )
+                })}
+              </Select>
+            </div>
+            <div>
+              <Select name="region" value="Регіон суду" changeSelect={(event) => this.changeSelect(event, 'region')} value={this.state.formData.region}>
+                <option value={null}>Обрати</option>
+                {regionList.map((region) => {
+                  return (
+                    <option value={region.name}>{region.name}</option>
+                  )
+                })}
+              </Select>
+            </div>
+            <div><Select name="Court" value="Суд" changeSelect={(event) => this.changeSelect(event, 'court')} value={this.state.formData.court}>
+              <option value={null}>Обрати</option>
               {courtsList.map((court, index) => {
                 return (
-                  <option value={court.instanse + '_' + court.region} key={court.instanse +  '_' + court.region + '_' + index}>{court.name}</option>
+                  <option value={court.name} key={court.name}>{court.name}</option>
                 )
               })}
-            </Select>
-            <Input label="Форма рішення" name="solution_form" onChange={() => this.changeInput(event, 'solution_form')} />
-            <Input label="Форма судочинства" name="application_form" onChange={() => this.changeInput(event, 'application_form')} />
+            </Select></div>
+            <div><Select name="JudgmentForm" value="Форма судового рішення" changeSelect={(event) => this.changeSelect(event, 'judgmentForm')} value={this.state.formData.judgmentForm}>
+              <option value={null}>Обрати</option>
+              {judgmentForms.map((judgmentForm, index) => {
+                return (
+                  <option value={judgmentForm.name} key={judgmentForm.name}>{judgmentForm.name}</option>
+                )
+              })}
+            </Select></div>
+            <div><Select name="JusticeKind" value="Форма судового рішення" changeSelect={(event) => this.changeSelect(event, 'justiceKind')} value={this.state.formData.justice_kind}>
+              <option value={null}>Обрати</option>
+              {justiceKinds.map((justiceKind, index) => {
+                return (
+                  <option value={justiceKind.name} key={justiceKind.justice_kind}>{justiceKind.name}</option>
+                )
+              })}
+            </Select></div>
           </div>
 
           <div className={theme.bottomForm}>
             <h4>Дата надходження</h4>
             <div className={theme.searchElement}>
-                <div className={theme.formElem}>
-                  <DatePicker label="Від" locale='ua' onChange={(date) => this.changeDate(date, 'come_from')} 
-                    maxDate={this.state.formData.come_to} value={this.state.formData.come_from} />
-                </div>
-                <div className={theme.formElem}>
-                  <DatePicker label="До" locale='ua'  onChange={(date) => this.changeDate(date, 'come_to')} 
-                    minDate={this.state.formData.come_from} value={this.state.formData.come_to} />
-                </div>
+              <div className={theme.formElem}>
+                <DatePicker label="Від" locale='ua' onChange={(date) => this.changeDate(date, 'receiptDate_from')}
+                  maxDate={this.state.formData.receiptDate_to} value={this.state.formData.receiptDate_from} />
+              </div>
+              <div className={theme.formElem}>
+                <DatePicker label="До" locale='ua' onChange={(date) => this.changeDate(date, 'receiptDate_to')}
+                  minDate={this.state.formData.receiptDate_from} value={this.state.formData.receiptDate_to} />
+              </div>
             </div>
           </div>
 
           <div className={theme.bottomForm}>
             <h4>Дата ухвали</h4>
             <div className={theme.searchElement}>
-                <div className={theme.formElem}>
-                  <DatePicker label="Від" locale='ua' onChange={(date) => this.changeDate(date, 'accept_from')} 
-                    maxDate={this.state.accept_to} value={this.state.accept_from} />
-                </div>
-                <div className={theme.formElem}>
-                  <DatePicker label="До" locale='ua'  onChange={(date) => this.changeDate(date, 'accept_to')} 
-                    minDate={this.state.accept_from} value={this.state.accept_to} />
-                </div>
+              <div className={theme.formElem}>
+                <DatePicker label="Від" locale='ua' onChange={(date) => this.changeDate(date, 'adjudicationDate_from')}
+                  maxDate={this.state.adjudicationDate_to} value={this.state.adjudicationDate_from} />
+              </div>
+              <div className={theme.formElem}>
+                <DatePicker label="До" locale='ua' onChange={(date) => this.changeDate(date, 'adjudicationDate_to')}
+                  minDate={this.state.adjudicationDate_from} value={this.state.adjudicationDate_to} />
+              </div>
             </div>
           </div>
 
-          <Button icon='search' onClick={this.search} raised primary/>
+          <Button icon='search' onClick={this.search} raised primary />
         </div>
         <Table selectable={false} style={{ marginTop: 10 }}>
           <TableHead>
@@ -196,6 +262,7 @@ class HomeView extends React.Component {
             <TableCell>Форма судочинства</TableCell>
             <TableCell>Дата надходження</TableCell>
             <TableCell>Дата ухвали</TableCell>
+            <TableCell>Відкрити</TableCell>
           </TableHead>
           {renderList}
         </Table>

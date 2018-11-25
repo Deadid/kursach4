@@ -10,7 +10,6 @@
   border-bottom: 1px solid #e6e6e6;
 }
 .topForm {
-  display: flex;
   align-items: stretch;
   justify-content: space-between;
   width: 100%;

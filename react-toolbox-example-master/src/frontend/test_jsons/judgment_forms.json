@@ -1,30 +1,30 @@
 [
     {
-        "name": "Вирок",
-        "code": 1
+      "judgment_code": 1,
+      "name": "Вирок"
     },
     {
-        "name": "Постанова",
-        "code": 2
+      "judgment_code": 2,
+      "name": "Постанова"
     },
     {
-        "name": "Рішення",
-        "code": 3
+      "judgment_code": 3,
+      "name": "Рішення"
     },
     {
-        "name": "Судовий наказ",
-        "code": 4
+      "judgment_code": 4,
+      "name": "Судовий наказ"
     },
     {
-        "name": "Ухвала",
-        "code": 5
+      "judgment_code": 5,
+      "name": "Ухвала"
     },
     {
-        "name": "Окрема ухвала",
-        "code": 6
+      "judgment_code": 6,
+      "name": "Окрема ухвала"
     },
     {
-        "name": "Окрема думка",
-        "code": 7
+      "judgment_code": 10,
+      "name": "Окрема думка"
     }
-]
+  ]
