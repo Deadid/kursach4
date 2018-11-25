@@ -14,6 +14,7 @@ public class UISearchRequest {
   private String adjudicationDateTo;
   private String receiptDateFrom;
   private String receiptDateTo;
+  private Integer page;
 
 
   public String getContent() {
@@ -110,6 +111,14 @@ public class UISearchRequest {
 
   public void setReceiptDateTo(String receiptDateTo) {
     this.receiptDateTo = receiptDateTo;
+  }
+
+  public Integer getPage() {
+    return page;
+  }
+
+  public void setPage(Integer page) {
+    this.page = page;
   }
 
   @Override
