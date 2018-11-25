@@ -4,7 +4,8 @@ import HomeView from '../components/HomeView'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (store) => ({
-  documents: store.documents
+  documents: store.documents,
+  searchInfo: store.search.get("searchInfo")
 })
 
 const mapDispatchToProps = (dispatch) => ({

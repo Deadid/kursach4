@@ -19,7 +19,6 @@ class RestService {
   }
 
   loadDocument(id) {
-
     return fetch(`http://localhost:8080/document/${id}`, { method: 'GET' })
       .then(response => response.json())
   }

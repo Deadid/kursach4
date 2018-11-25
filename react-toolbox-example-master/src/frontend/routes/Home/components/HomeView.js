@@ -70,38 +70,7 @@ class HomeView extends React.Component {
     this.loadJusticeKindSelectOptions();
   }
 
-  componentWillReceiveProps(nextProps) {
-    const searchItems = [...nextProps.documents.valueSeq().toJS()];
-    const maxItemsParePage = 6;
-
-    const paginationPagesCount = Math.ceil(searchItems.length / maxItemsParePage);
-    this.setState({
-      maxPages: paginationPagesCount
-    });
-
-    let searchItemsParePage = [];
-    let pageArray = [];
-    let itemCounter = 0;
-    searchItems.forEach((searchItem, index) => {
-      pageArray.push(searchItem);
-      itemCounter++;
-
-      if (itemCounter === (maxItemsParePage) || (searchItems.length - 1) === index) {
-        searchItemsParePage.push(pageArray);
-        itemCounter = 0;
-        pageArray = [];
-      }
-
-    });
-    this.setState({
-      mainList: searchItemsParePage
-    });
-    if (searchItemsParePage.length > 0) {
-      this.setState({
-        activePage: 0
-      })
-    }
-  }
+  componentWillReceiveProps(nextProps) {}
 
   constructor() {
     super()
@@ -116,6 +85,10 @@ class HomeView extends React.Component {
     if (this.formValid()) {
       this.props.search(this.state.formData)
     }
+  }
+
+  goToPage(index) {
+    this.props.search({...this.state.formData, page: index})
   }
   // check is at least one field is not empty
   formValid() {
@@ -153,7 +126,7 @@ class HomeView extends React.Component {
 
     const { courtsList = [], regionList = [], causeCategories = [], judgmentForms = [] } = this.state;
 
-    const renderList = this.state.mainList && this.state.mainList[this.state.activePage].map((item, idx) => {
+    const renderList = this.props.documents.valueSeq().toJS().map((item, idx) => {
       return (
         <TableRow key={idx}>
           <TableCell>{item.causeNumber}</TableCell>
@@ -266,7 +239,7 @@ class HomeView extends React.Component {
           </TableHead>
           {renderList}
         </Table>
-        <Pagination activePage={this.state.activePage} maxPages={this.state.maxPages} goToPage={this.changePage} />
+        {this.props.searchInfo && <Pagination goToPage={(index) => this.goToPage(index)} {...this.props.searchInfo.toJS()} />}
       </div>
     )
   }
