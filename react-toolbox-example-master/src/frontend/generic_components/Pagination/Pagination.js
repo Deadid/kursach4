@@ -7,7 +7,7 @@ class Pagination extends Component {
     createPaginationList () {
         let paginationList = [];
         const initial = this.props.number;
-        for (let i = -2, y = 1; y<= 5 && this.props.number + i < this.props.totalPages; i++) {
+        for (let i = -2, y = 1; y<= 5 && this.props.number + i <= this.props.totalPages; i++) {
             if(initial + i > 0) {
                 paginationList.push(
                     <div 
