@@ -186,7 +186,6 @@ class HomeView extends React.Component {
 
           <Button icon='search' onClick={this.search} raised primary/>
         </div>
-  
         <Table selectable={false} style={{ marginTop: 10 }}>
           <TableHead>
             <TableCell>Номер справи</TableCell>

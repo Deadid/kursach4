@@ -9,6 +9,13 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@iarna/rtf-to-html@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iarna/rtf-to-html/-/rtf-to-html-1.1.0.tgz#f6950f376865f995e9b8d815fe89e9bf3e1236ee"
+  integrity sha512-2bmUxotlWMfDMkjMidIMyoQfuK+QitW0Ys2T098WrgBvPZUV5NN5EvD1vuONrmAtweCDwagmQf6NxRtSbq+siQ==
+  dependencies:
+    rtf-parser "^1.0.4"
+
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"
@@ -3073,10 +3080,22 @@ https-browserify@0.0.1:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
   integrity sha1-P5E2XKvmC3ftDruiS0VOPgnZWoI=
 
+i@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/i/-/i-0.3.6.tgz#d96c92732076f072711b6b10fd7d4f65ad8ee23d"
+  integrity sha1-2WyScyB28HJxG2sQ/X1PZa2O4j0=
+
 iconv-lite@0.4.13:
   version "0.4.13"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
   integrity sha1-H4irpKsLFQjoMSrMOTRfNumS4vI=
+
+iconv-lite@^0.4.15:
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+  integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3"
 
 iconv-lite@~0.4.13:
   version "0.4.15"
@@ -5310,6 +5329,27 @@ pretty-format@^19.0.0:
   dependencies:
     ansi-styles "^3.0.0"
 
+prismic-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prismic-helpers/-/prismic-helpers-1.0.0.tgz#8337420cf187f55fb7b7a8be755523c8696fc329"
+  integrity sha1-gzdCDPGH9V+3t6i+dVUjyGlvwyk=
+
+prismic-reactjs@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/prismic-reactjs/-/prismic-reactjs-0.3.2.tgz#deebb1a14772e3194c097ddc540e02afa01ac789"
+  integrity sha512-4nPNWGuYdwVd++Xbe9h0mqauDh55IpprI8BBAj3M24UkgqVZScylMireNvyr3O7qV3uPx/LW0Eba8YYMsJltUw==
+  dependencies:
+    prismic-helpers "^1.0.0"
+    prismic-richtext "^0.4.2"
+
+prismic-richtext@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/prismic-richtext/-/prismic-richtext-0.4.2.tgz#bdc27d2c3d0e8e2226918b7ad2708fd3ac3d1e7f"
+  integrity sha512-+6frCZktVUHX+IA2a/s4EUukVvlLwjgdsJPRVkZmq/inaR1NVnjTHqM9l81QGEXAlTO5Jhzk0hhQBL1Pj73TYw==
+  dependencies:
+    ramda "^0.25.0"
+    uuid "^3.1.0"
+
 private@^0.1.6:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.7.tgz#68ce5e8a1ef0a23bb570cc28537b5332aba63ef1"
@@ -5433,6 +5473,11 @@ ramda@^0.23.0:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.23.0.tgz#ccd13fff73497a93974e3e86327bfd87bd6e8e2b"
   integrity sha1-zNE//3NJepOXTj6GMnv9h71ujis=
 
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+
 randomatic@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.6.tgz#110dcabff397e9dcff7c0789ccc0a49adf1ec5bb"
@@ -5503,6 +5548,11 @@ react-hot-loader@^3.0.0-beta.6:
     react-proxy "^3.0.0-alpha.0"
     redbox-react "^1.2.5"
     source-map "^0.4.4"
+
+react-iframe@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-1.3.3.tgz#553f9e44204486ecddd4027d8bb647e2a132ffcc"
+  integrity sha512-W/Xs5wovFoqoj7HF0yy1R8gXDYzMAjsrpsTC/xkDzpcAYzanjD9MrWp3hri0DGqCtWsbqD2IHh29RuBlglSmsg==
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
@@ -5879,6 +5929,14 @@ ripemd160@^1.0.0:
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-1.0.1.tgz#93a4bbd4942bc574b69a8fa57c71de10ecca7d6e"
   integrity sha1-k6S71JQrxXS2mo+lfHHeEOzKfW4=
 
+rtf-parser@^1.0.4, rtf-parser@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/rtf-parser/-/rtf-parser-1.3.0.tgz#c8636f758a7e042deeedf15dc9e6849f11eddc80"
+  integrity sha512-zF8L8W8nnqcd8HSzwz6IUEC0u3UYMI86FO7f0vIIJUXpRFZjGcdLaQCyApi0N4+xa/JX7z6facFJdKmYEl6LpA==
+  dependencies:
+    iconv-lite "^0.4.15"
+    readable-stream "^2.2.2"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
@@ -5895,6 +5953,11 @@ safe-buffer@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
   integrity sha1-0mPKVGls2KMGtcplUekt5XkY++c=
+
+"safer-buffer@>= 2.1.2 < 3":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+  integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
 sane@~1.5.0:
   version "1.5.0"
@@ -6576,6 +6639,11 @@ uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
   integrity sha1-ZUS7ot/ajBzxfmKaOjBeK7H+5sE=
+
+uuid@^3.1.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"

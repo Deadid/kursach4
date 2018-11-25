@@ -1,6 +1,7 @@
 import RestService from '../rest'
 import { browserHistory } from 'react-router'
 import * as actionTypes from '../constants/action.types'
+import rtfToHtml from '@iarna/rtf-to-html'
 
 export function retreiveDocuments () {
   return (dispatch) => {
@@ -30,6 +31,27 @@ export function addDocument (data) {
         doc: document
       })
       browserHistory.push('/')
+    })
+  }
+}
+export function loadDocument (id) {
+  return (dispatch) => {
+    RestService.loadDocument(id)
+      .then(file => {
+        dispatch({
+        type: actionTypes.DOCUMENT_FILE_LOADED,
+        file,
+        id
+      })
+      RestService.loadDocumentContent(file.url).then(content => {
+        rtfToHtml.fromString(content, (err,doc) =>{
+        dispatch({
+          type: actionTypes.DOCUMENT_CONTENT_LOADED,
+          content: doc,
+          id
+        })
+      })
+      })
     })
   }
 }
