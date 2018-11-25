@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
-@RestController("/search")
+@RestController
 @CrossOrigin(origins = "*")
 public class SearchController {
 
   @Autowired
   private ElasticsearchTemplate template;
 
-  @PostMapping
+  @PostMapping("/search")
   public AggregatedPage<ElasticsearchDocumentEntity> search(@RequestParam("content")String contentToSearch, @RequestParam(required = false, name = "page") Integer page) {
     NativeSearchQuery searchQuery = new NativeSearchQueryBuilder().withFields("*").withQuery(
             queryStringQuery(contentToSearch).defaultField("content")).withSort(SortBuilders.scoreSort()).withSort(SortBuilders.fieldSort("id.keyword"))

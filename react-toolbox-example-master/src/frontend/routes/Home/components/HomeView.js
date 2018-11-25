@@ -38,7 +38,7 @@ class HomeView extends React.Component {
           <Input label="Пошук" value={this.state.searchQuery} onChange={this.onChange} />
           <Button icon='search' onClick={this.search} raised primary/>
         </div>
-        <Table selectable={false} style={{ marginTop: 10 }}>
+        {this.props.documents && <Table selectable={false} style={{ marginTop: 10 }}>
         <TableHead>
           <TableCell>Номер справи</TableCell>
           <TableCell>Категорія справи</TableCell>
@@ -48,20 +48,22 @@ class HomeView extends React.Component {
           <TableCell>Форма судочинства</TableCell>
           <TableCell>Дата надходження</TableCell>
           <TableCell>Дата ухвали</TableCell>
+          <TableCell>Відкрити</TableCell>
         </TableHead>
         {this.props.documents.valueSeq().toJS().map((item, idx) => (
-          <TableRow key={idx}>
-            <TableCell>{item.causeNumber}</TableCell>
-            <TableCell>{item.category}</TableCell>
-            <TableCell>{item.court}</TableCell>
-            <TableCell>{item.judge}</TableCell>
-            <TableCell>{item.judgment}</TableCell>
-            <TableCell>{item.justiceKind}</TableCell>
-            <TableCell>{item.receiptDate}</TableCell>
-            <TableCell>{item.adjudicationDate}</TableCell>
+          <TableRow key={item.id}>
+            <TableCell>{item.causeNumber ? item.causeNumber : "Невідомо" }</TableCell>
+            <TableCell>{item.category ? item.category : "Невідомо" }</TableCell>
+            <TableCell>{item.court ? item.court : "Невідомо" }</TableCell>
+            <TableCell>{item.judge ? item.judge : "Невідомо" }</TableCell>
+            <TableCell>{item.judgment ? item.judgment : "Невідомо" }</TableCell>
+            <TableCell>{item.justiceKind ? item.justiceKind : "Невідомо" }</TableCell>
+            <TableCell>{item.receiptDate ? item.receiptDate : "Невідомо" }</TableCell>
+            <TableCell>{item.adjudicationDate ? item.adjudicationDate : "Невідомо" }</TableCell>
+            <TableCell><Link  className={theme.link} to={`/document/${item.id}`}>Відкрити</Link></TableCell>
           </TableRow>
         ))}
-      </Table>
+      </Table>}
       </div>
     )
   }

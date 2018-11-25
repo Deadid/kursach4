@@ -65,7 +65,13 @@ const settings = {
     port: 8008,
     hot: true,
     historyApiFallback: true,
-    inline: true
+    inline: true,
+    proxy: {
+      '/files': {
+        target: 'http://od.reyestr.court.gov.ua',
+        secure: false
+      }
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -33,7 +33,7 @@ public class DocumentController {
 	public DocumentBean getById(@PathVariable String id) {
 
 		DocumentEntity found = documentDao.findById(id).get();
-		DocumentBean bean = new DocumentBean(found.getId(), found.getJusticeKind().getName(), found.getCauseNumber());
+		DocumentBean bean = new DocumentBean(found.getId(), found.getJusticeKind().getName(), found.getCauseNumber(), found.getDocUrl());
 		bean.add(linkTo(methodOn(DocumentController.class).getById(id)).withSelfRel());
 
 		return bean;
@@ -54,7 +54,7 @@ public class DocumentController {
 		List<ElasticsearchDocumentEntity> entities = new ArrayList<>();
 				elasticsearchDocumentDao.findAll().forEach(entities::add);
 		return entities.stream().map(entity -> {
-			DocumentBean bean = new DocumentBean(entity.getId(), entity.getId(), entity.getContent());
+			DocumentBean bean = new DocumentBean(entity.getId(), entity.getId(), entity.getContent(), null);
 			bean.add(linkTo(methodOn(DocumentController.class).getById(entity.getId())).withSelfRel());
 			return bean;
 		}).collect(Collectors.toList());

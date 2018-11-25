@@ -15,7 +15,6 @@ class App extends React.Component {
   render () {
     return (
     <Layout theme={theme}>
-      <AppBar leftIcon='perm_media' title='Реєстр судових рішень' />
       <div className={theme.children}>
         {this.props.children}
       </div>
