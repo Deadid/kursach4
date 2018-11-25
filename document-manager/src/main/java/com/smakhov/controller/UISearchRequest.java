@@ -6,10 +6,9 @@ public class UISearchRequest {
   private String judge;
   private String caseNumber;
   private String causeCategory;
-  private String region;
   private String court;
   private String judgmentForm;
-  private String jussticeKind;
+  private String justiceKind;
   private String adjudicationDateFrom;
   private String adjudicationDateTo;
   private String receiptDateFrom;
@@ -49,14 +48,6 @@ public class UISearchRequest {
     this.causeCategory = causeCategory;
   }
 
-  public String getRegion() {
-    return region;
-  }
-
-  public void setRegion(String region) {
-    this.region = region;
-  }
-
   public String getCourt() {
     return court;
   }
@@ -73,12 +64,12 @@ public class UISearchRequest {
     this.judgmentForm = judgmentForm;
   }
 
-  public String getJussticeKind() {
-    return jussticeKind;
+  public String getJusticeKind() {
+    return justiceKind;
   }
 
-  public void setJussticeKind(String jussticeKind) {
-    this.jussticeKind = jussticeKind;
+  public void setJusticeKind(String justiceKind) {
+    this.justiceKind = justiceKind;
   }
 
   public String getAdjudicationDateFrom() {
@@ -121,6 +112,11 @@ public class UISearchRequest {
     this.page = page;
   }
 
+  public boolean hasAnyFilter() {
+    return judge != null || caseNumber != null || court != null || judgmentForm != null || justiceKind != null || causeCategory != null ||
+            adjudicationDateFrom != null || adjudicationDateTo != null || receiptDateFrom != null || receiptDateTo != null;
+  }
+
   @Override
   public String toString() {
     return "UISearchRequest{" +
@@ -128,10 +124,9 @@ public class UISearchRequest {
             ", judge='" + judge + '\'' +
             ", caseNumber='" + caseNumber + '\'' +
             ", causeCategory='" + causeCategory + '\'' +
-            ", region='" + region + '\'' +
             ", court='" + court + '\'' +
             ", judgmentForm='" + judgmentForm + '\'' +
-            ", jussticeKind='" + jussticeKind + '\'' +
+            ", justiceKind='" + justiceKind + '\'' +
             ", adjudicationDateFrom='" + adjudicationDateFrom + '\'' +
             ", adjudicationDateTo='" + adjudicationDateTo + '\'' +
             ", receiptDateFrom='" + receiptDateFrom + '\'' +
