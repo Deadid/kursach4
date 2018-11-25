@@ -8,10 +8,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
@@ -23,9 +20,9 @@ public class SearchController {
   private ElasticsearchTemplate template;
 
   @PostMapping("/search")
-  public AggregatedPage<ElasticsearchDocumentEntity> search(@RequestParam("content")String contentToSearch, @RequestParam(required = false, name = "page") Integer page) {
+  public AggregatedPage<ElasticsearchDocumentEntity> search(@RequestBody UISearchRequest searchRequest, @RequestParam(required = false, name = "page") Integer page) {
     NativeSearchQuery searchQuery = new NativeSearchQueryBuilder().withFields("*").withQuery(
-            queryStringQuery(contentToSearch).defaultField("content")).withSort(SortBuilders.scoreSort()).withSort(SortBuilders.fieldSort("id.keyword"))
+            queryStringQuery(searchRequest.getContent()).defaultField("content")).withSort(SortBuilders.scoreSort()).withSort(SortBuilders.fieldSort("id.keyword"))
             .withPageable(PageRequest.of(page != null ? page : 0, 20))
             .build();
 

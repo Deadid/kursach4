@@ -1,0 +1,22 @@
+[
+    {
+      "justice_kind": 1,
+      "name": "Цивільне"
+    },
+    {
+      "justice_kind": 2,
+      "name": "Кримінальне"
+    },
+    {
+      "justice_kind": 3,
+      "name": "Господарське"
+    },
+    {
+      "justice_kind": 4,
+      "name": "Адміністративне"
+    },
+    {
+      "justice_kind": 5,
+      "name": "Адмінправопорушення"
+    }
+  ]

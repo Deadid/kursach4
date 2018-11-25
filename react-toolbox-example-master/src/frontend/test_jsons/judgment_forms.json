@@ -1,0 +1,30 @@
+[
+    {
+      "judgment_code": 1,
+      "name": "Вирок"
+    },
+    {
+      "judgment_code": 2,
+      "name": "Постанова"
+    },
+    {
+      "judgment_code": 3,
+      "name": "Рішення"
+    },
+    {
+      "judgment_code": 4,
+      "name": "Судовий наказ"
+    },
+    {
+      "judgment_code": 5,
+      "name": "Ухвала"
+    },
+    {
+      "judgment_code": 6,
+      "name": "Окрема ухвала"
+    },
+    {
+      "judgment_code": 10,
+      "name": "Окрема думка"
+    }
+  ]
