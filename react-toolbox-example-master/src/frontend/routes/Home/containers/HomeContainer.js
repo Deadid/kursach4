@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (store) => ({
   documents: store.documents,
-  searchInfo: store.search.get("searchInfo")
+  searchInfo: store.search.get("searchInfo"),
+  isSearching: store.search.get("isSearching", false)
 })
 
 const mapDispatchToProps = (dispatch) => ({

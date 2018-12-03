@@ -1,5 +1,7 @@
 import React from 'react';
 import { List, ListItem } from 'react-toolbox/lib/list';
+import ProgressBar from 'react-toolbox/lib/progress_bar';
+
 import Table, { TableCell, TableHead, TableRow } from 'react-toolbox/lib/table';
 import { Input } from 'react-toolbox/lib/input';
 import { DatePicker } from 'react-toolbox/lib/date_picker';
@@ -220,9 +222,11 @@ class HomeView extends React.Component {
             </div>
           </div>
 
-          <Button icon='search' onClick={this.search} raised primary />
+          <Button icon='search' onClick={this.search} raised primary disabled={this.props.isSearching} />
         </div>
-        <Table selectable={false} style={{ marginTop: 10 }}>
+        {this.props.isSearching && <div className={theme.loading}><ProgressBar type="circular" mode="indeterminate" /></div>}
+        {this.props.searchInfo && !this.props.isSearching ? 
+        (<div><Table selectable={false} style={{ marginTop: 10 }}>
           <TableHead>
             <TableCell>Номер справи</TableCell>
             <TableCell>Категорія справи</TableCell>
@@ -236,7 +240,9 @@ class HomeView extends React.Component {
           </TableHead>
           {renderList}
         </Table>
-        {this.props.searchInfo && <Pagination goToPage={(index) => this.goToPage(index)} {...this.props.searchInfo.toJS()} />}
+         <Pagination goToPage={(index) => this.goToPage(index)} {...this.props.searchInfo.toJS()} /></div>) : null
+         }
+
       </div>
     )
   }
