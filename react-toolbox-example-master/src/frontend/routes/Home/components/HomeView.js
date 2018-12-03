@@ -146,11 +146,13 @@ class HomeView extends React.Component {
         <div className={theme.search}>
 
           <div className={theme.topForm}>
-            <Input label="Вміст" value={this.state.searchQuery} onChange={(event) => this.changeInput(event, "content")} />
-            <Input label="Суддя" name="judge" onChange={(event) => this.changeInput(event, 'judge')} />
-            <Input label="Номер справи" name="case number" onChange={(event) => this.changeInput(event, 'caseNumber')} />
+          <div>
+            <div><div>Вміст:</div> <Input label="Вміст" value={this.state.searchQuery} onChange={(event) => this.changeInput(event, "content")} /></div>
+            <div><div>Суддя:</div><Input label="Суддя" name="judge" onChange={(event) => this.changeInput(event, 'judge')} /></div>
+            <div><div>Номер справи:</div><Input label="Номер справи" name="case number" onChange={(event) => this.changeInput(event, 'caseNumber')} /></div>
+            </div>
             <div>
-              <Select name="causeCategory" value="Категорія справи" changeSelect={(event) => this.changeSelect(event, 'causeCategory')} value={this.state.formData.causeCategory}>
+              <Select name="causeCategory" title="Категорія справи" changeSelect={(event) => this.changeSelect(event, 'causeCategory')} value={this.state.formData.causeCategory}>
                 <option value={null}>Обрати</option>
                 {causeCategories.map((causeCategory) => {
                   return (
@@ -159,23 +161,28 @@ class HomeView extends React.Component {
                 })}
               </Select>
             </div>
-            <div><Select name="Court" value="Суд" changeSelect={(event) => this.changeSelect(event, 'court')} value={this.state.formData.court}>
+            <div>
+              <Select name="Court" title="Суд" changeSelect={(event) => this.changeSelect(event, 'court')} value={this.state.formData.court}>
               <option value={null}>Обрати</option>
               {courtsList.map((court, index) => {
                 return (
                   <option value={court.name} key={court.name}>{court.name}</option>
                 )
               })}
-            </Select></div>
-            <div><Select name="JudgmentForm" value="Форма судового рішення" changeSelect={(event) => this.changeSelect(event, 'judgmentForm')} value={this.state.formData.judgmentForm}>
+            </Select>
+            </div>
+            <div>
+              <Select name="JudgmentForm" title="Форма судового рішення" changeSelect={(event) => this.changeSelect(event, 'judgmentForm')} value={this.state.formData.judgmentForm}>
               <option value={null}>Обрати</option>
               {judgmentForms.map((judgmentForm, index) => {
                 return (
                   <option value={judgmentForm.name} key={judgmentForm.name}>{judgmentForm.name}</option>
                 )
               })}
-            </Select></div>
-            <div><Select name="JusticeKind" value="Форма судового рішення" changeSelect={(event) => this.changeSelect(event, 'justiceKind')} value={this.state.formData.justice_kind}>
+            </Select>
+            </div>
+            <div>
+              <Select name="JusticeKind" title="Форма судовочинства" changeSelect={(event) => this.changeSelect(event, 'justiceKind')} value={this.state.formData.justice_kind}>
               <option value={null}>Обрати</option>
               {justiceKinds.map((justiceKind, index) => {
                 return (

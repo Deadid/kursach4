@@ -8,13 +8,21 @@
   align-items: center;
   padding: 0 15px 10px 15px;
   border-bottom: 1px solid #e6e6e6;
+  justify-content: center;
 }
 .topForm {
   align-items: stretch;
   justify-content: space-between;
-  width: 100%;
+  width: 73%;
 }
-
+.topForm>div:first-child>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topForm>div:first-child>div>div:nth-child(2){
+  min-width: 92.5%;
+}
 .bottomForm {
   margin-right: 25px;
   display: flex;

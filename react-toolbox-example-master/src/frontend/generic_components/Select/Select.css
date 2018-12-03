@@ -1,0 +1,14 @@
+.select {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select>span {
+    padding-right: 10px;
+    
+}
+.select>select {
+    min-width: 92.5%;
+    height: 30px;
+}
