@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem } from 'react-toolbox/lib/list';
+import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import ProgressBar from 'react-toolbox/lib/progress_bar';
 
 import Table, { TableCell, TableHead, TableRow } from 'react-toolbox/lib/table';
@@ -12,11 +12,12 @@ import Pagination from '../../../generic_components/Pagination';
 
 import theme from './HomeView.css'
 
-import courtsList from '../../../test_jsons/courts.json'; // remove it when request will work
-import justiceKinds from '../../../test_jsons/justice_kinds.json'; // remove it when request will work
-import regionList from '../../../test_jsons/regions.json'; // remove it when request will work
-import causeCategories from '../../../test_jsons/cause_categories.json'; // remove it when request will work
-import judgmentForms from '../../../test_jsons/judgment_forms.json'; // remove it when request will work
+import courtsList from '../../../test_jsons/courts.json';
+import justiceKinds from '../../../test_jsons/justice_kinds.json';
+import regionList from '../../../test_jsons/regions.json';
+import causeCategories from '../../../test_jsons/cause_categories.json';
+import judgmentForms from '../../../test_jsons/judgment_forms.json';
+import instances from '../../../test_jsons/instances.json';
 
 class HomeView extends React.Component {
 
@@ -32,6 +33,13 @@ class HomeView extends React.Component {
       courtsList: courtsList
     });
 
+  }
+
+  // load data for instances select
+  loadInstanceSelectOptions() {
+    this.setState({
+      instanceList: instances
+    });
   }
 
   // load data for justice kinds select
@@ -70,6 +78,7 @@ class HomeView extends React.Component {
     this.loadRegionSelectOptions();
     this.loadJudgmentFormsSelectOptions();
     this.loadJusticeKindSelectOptions();
+    this.loadInstanceSelectOptions();
   }
 
   componentWillReceiveProps(nextProps) {}
@@ -126,7 +135,20 @@ class HomeView extends React.Component {
 
   render() {
 
-    const { courtsList = [], regionList = [], causeCategories = [], judgmentForms = [] } = this.state;
+    const { courtsList : stateCourtsList = [], regionList = [], causeCategories = [], judgmentForms = [], instanceList = [] } = this.state;
+    const courtsList = stateCourtsList.filter(court => {
+      if(this.state.formData.region == null)
+      {
+        return true;
+      }
+      return court.region_code == this.state.formData.region
+    }).filter(court => {
+      if(this.state.formData.instance == null)
+      {
+        return true;
+      }
+      return court.instance_code == this.state.formData.instance
+    })
 
     const renderList = this.props.documents.valueSeq().toJS().map((item, idx) => {
       return (
@@ -145,14 +167,17 @@ class HomeView extends React.Component {
     });
     return (
       <div>
+        
         <div className={theme.search}>
-
+        <Card  style={{width: '80%', alignItems: "center"}}>
+          <CardTitle>Пошук</CardTitle>
           <div className={theme.topForm}>
           <div>
             <div><div>Вміст:</div> <Input label="Вміст" value={this.state.searchQuery} onChange={(event) => this.changeInput(event, "content")} /></div>
             <div><div>Суддя:</div><Input label="Суддя" name="judge" onChange={(event) => this.changeInput(event, 'judge')} /></div>
             <div><div>Номер справи:</div><Input label="Номер справи" name="case number" onChange={(event) => this.changeInput(event, 'caseNumber')} /></div>
             </div>
+            <hr />
             <div>
               <Select name="causeCategory" title="Категорія справи" changeSelect={(event) => this.changeSelect(event, 'causeCategory')} value={this.state.formData.causeCategory}>
                 <option value={null}>Обрати</option>
@@ -162,6 +187,28 @@ class HomeView extends React.Component {
                   )
                 })}
               </Select>
+            </div>
+            <hr />
+            <div className={theme.courtBlock}>
+            <div>
+            <Select name="Region" title="Регіон" changeSelect={(event) => this.changeSelect(event, 'region')} value={this.state.formData.region}>
+              <option value={null}>Обрати</option>
+              {regionList.map((region, index) => {
+                return (
+                  <option value={region.region_code} key={region.region_code}>{region.name}</option>
+                )
+              })}
+            </Select>
+            </div>
+            <div>
+            <Select name="Instance" title="Інстанція" changeSelect={(event) => this.changeSelect(event, 'instance')} value={this.state.formData.instance}>
+              <option value={null}>Обрати</option>
+              {instanceList.map((instance, index) => {
+                return (
+                  <option value={instance.code} key={instance.code}>{instance.instance}</option>
+                )
+              })}
+            </Select>
             </div>
             <div>
               <Select name="Court" title="Суд" changeSelect={(event) => this.changeSelect(event, 'court')} value={this.state.formData.court}>
@@ -173,6 +220,8 @@ class HomeView extends React.Component {
               })}
             </Select>
             </div>
+            </div>
+            <hr />
             <div>
               <Select name="JudgmentForm" title="Форма судового рішення" changeSelect={(event) => this.changeSelect(event, 'judgmentForm')} value={this.state.formData.judgmentForm}>
               <option value={null}>Обрати</option>
@@ -193,8 +242,9 @@ class HomeView extends React.Component {
               })}
             </Select></div>
           </div>
-
+          
           <div className={theme.bottomForm}>
+
             <h4>Дата надходження</h4>
             <div className={theme.searchElement}>
               <div className={theme.formElem}>
@@ -221,9 +271,10 @@ class HomeView extends React.Component {
               </div>
             </div>
           </div>
-
           <Button icon='search' onClick={this.search} raised primary disabled={this.props.isSearching} />
+          </Card>
         </div>
+        
         {this.props.isSearching && <div className={theme.loading}><ProgressBar type="circular" mode="indeterminate" /></div>}
         {this.props.searchInfo && !this.props.isSearching ? 
         (<div><Table selectable={false} style={{ marginTop: 10 }}>

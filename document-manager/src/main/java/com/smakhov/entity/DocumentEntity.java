@@ -42,7 +42,6 @@ public class DocumentEntity {
     @Column(name = "receipt_date")
     private Date receiptDate;
 
-
     @Column
     private Boolean indexed;
 

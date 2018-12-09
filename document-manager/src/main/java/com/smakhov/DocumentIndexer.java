@@ -1,7 +1,7 @@
 package com.smakhov;
 
 import com.smakhov.dao.elasticsearch.ContentExtractor;
-import com.smakhov.dao.elasticsearch.DocumentDao;
+import com.smakhov.dao.DocumentDao;
 import com.smakhov.dao.elasticsearch.ElasticsearchDocumentDao;
 import com.smakhov.entity.DocumentEntity;
 import com.smakhov.entity.ElasticsearchDocumentEntity;
@@ -34,7 +34,7 @@ public class DocumentIndexer implements ApplicationListener<ApplicationReadyEven
     @Override
     @Async
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
-        boolean hasNext = true;
+        boolean hasNext;
         int page = 0;
         Page<DocumentEntity> notIndexed = dao.findByIndexedFalse(PageRequest.of(0, 500));
         hasNext = notIndexed.hasNext();
@@ -67,5 +67,4 @@ public class DocumentIndexer implements ApplicationListener<ApplicationReadyEven
         }
         LOG.info("Indexing complete");
     }
-
 }

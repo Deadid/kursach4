@@ -111,565 +111,565 @@
       "court_code": "0101",
       "name": "Алуштинський міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0105",
       "name": "Джанкойський міськрайонний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0106",
       "name": "Євпаторійський міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0108",
       "name": "Керченський міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0114",
       "name": "Нижньогірський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0117",
       "name": "Сакський міськрайонний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0119",
       "name": "Совєтський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0120",
       "name": "Судацький міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0122",
       "name": "Центральний районний суд м. Сімферополя",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0170",
       "name": "Окружний адміністративний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0190",
       "name": "Апеляційний суд Автономної Республіки Крим",
       "instance_code": 2,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0191",
       "name": "Апеляційний суд Автономної Республіки Крим (м. Феодосія)",
       "instance_code": 2,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0202",
       "name": "Бершадський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0204",
       "name": "Гайсинський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0207",
       "name": "Іллінецький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0209",
       "name": "Козятинський міськрайонний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0210",
       "name": "Крижопільський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0215",
       "name": "Могилів-Подільський міськрайонний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0219",
       "name": "Піщанський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0221",
       "name": "Староміський районний суд м. Вінниці",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0222",
       "name": "Теплицький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0224",
       "name": "Томашпільський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0226",
       "name": "Тульчинський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0229",
       "name": "Чечельницький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0230",
       "name": "Шаргородський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0290",
       "name": "Апеляційний суд Вінницької області",
       "instance_code": 2,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0301",
       "name": "Володимир-Волинський міський суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0303",
       "name": "Іваничівський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0304",
       "name": "Камінь-Каширський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0307",
       "name": "Локачинський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0308",
       "name": "Луцький міськрайонний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0310",
       "name": "Любомльський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0312",
       "name": "Нововолинський міський суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0315",
       "name": "Старовижівський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0317",
       "name": "Шацький районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0370",
       "name": "Волинський окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0402",
       "name": "Апостолівський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0405",
       "name": "Васильківський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0411",
       "name": "Довгинцівський районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0412",
       "name": "Жовтневий районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0414",
       "name": "Жовтоводський міський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0418",
       "name": "Кіровський районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0420",
       "name": "Криворізький районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0423",
       "name": "Магдалинівський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0425",
       "name": "Межівський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0427",
       "name": "Новомосковський міськрайонний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0432",
       "name": "Петропавлівський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0434",
       "name": "П'ятихатський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0435",
       "name": "Саксаганський районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0438",
       "name": "Солонянський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0440",
       "name": "Тернівський міський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0442",
       "name": "Томаківський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0445",
       "name": "Широківський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0490",
       "name": "Апеляційний суд Дніпропетровської області",
       "instance_code": 2,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0491",
       "name": "Апеляційний суд Дніпропетровської області",
       "instance_code": 2,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0503",
       "name": "Артемівський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0505",
       "name": "Великоновосілківський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0506",
       "name": "Волноваський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0508",
       "name": "Ворошиловський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0510",
       "name": "Гірницький районний суд м. Макіївки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0512",
       "name": "Дзержинський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0513",
       "name": "Димитровський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0514",
       "name": "Добропільський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0517",
       "name": "Єнакіївський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0518",
       "name": "Жданівський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0520",
       "name": "Іллічівський районний суд м. Маріуполя",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0521",
       "name": "Калінінський районний суд м. Горлівки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0523",
       "name": "Київський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0526",
       "name": "Кіровський районний суд м. Макіївки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0528",
       "name": "Краматорський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0529",
       "name": "Красноармійський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0533",
       "name": "Мар’їнський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0534",
       "name": "Микитівський районний суд м. Горлівки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0538",
       "name": "Орджонікідзевський районний суд м. Маріуполя",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0541",
       "name": "Приморський районний суд м. Маріуполя",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0543",
       "name": "Селидівський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0546",
       "name": "Совєтський районний суд м. Макіївки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0548",
       "name": "Тельманівський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0554",
       "name": "Шахтарський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0555",
       "name": "Ясинуватський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0590",
       "name": "Апеляційний суд Донецької області",
       "instance_code": 2,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0591",
       "name": "Апеляційний суд Донецької області",
       "instance_code": 2,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0592",
       "name": "Апеляційний суд Донецької області (м. Артемівськ)",
       "instance_code": 2,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0605",
       "name": "Брусилівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0606",
       "name": "Володарсько-Волинський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0608",
       "name": "Житомирський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0611",
       "name": "Коростишівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0614",
       "name": "Малинський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0616",
       "name": "Новоград-Волинський міськрайонний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0619",
       "name": "Попільнянський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0621",
       "name": "Романівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0623",
       "name": "Червоноармійський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0670",
       "name": "Житомирський окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0706",
       "name": "Міжгірський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": 1011,
@@ -1245,61 +1245,61 @@
       "court_code": "0814",
       "name": "Ленінський районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0819",
       "name": "Оріхівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0822",
       "name": "Приморський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0824",
       "name": "Токмацький районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0890",
       "name": "Апеляційний суд Запорізької області",
       "instance_code": 2,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0902",
       "name": "Болехівський міський суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0905",
       "name": "Городенківський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0907",
       "name": "Івано-Франківський міський суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0913",
       "name": "Рожнятівський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0916",
       "name": "Тлумацький районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": 1001,
@@ -1323,163 +1323,163 @@
       "court_code": "0709",
       "name": "Рахівський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0710",
       "name": "Свалявський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0711",
       "name": "Тячівський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0713",
       "name": "Хустський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0770",
       "name": "Закарпатський окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0790",
       "name": "Апеляційний суд Закарпатської області",
       "instance_code": 2,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0804",
       "name": "Веселівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0806",
       "name": "Гуляйпільський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0807",
       "name": "Енергодарський міський суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0808",
       "name": "Жовтневий районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0811",
       "name": "Кам'янсько-Дніпровський районний суд",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0817",
       "name": "Новомиколаївський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0818",
       "name": "Орджонікідзевський районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0820",
       "name": "Пологівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0823",
       "name": "Розівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0826",
       "name": "Чернігівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0870",
       "name": "Запорізький окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0901",
       "name": "Богородчанський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0903",
       "name": "Верховинський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0904",
       "name": "Галицький районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0908",
       "name": "Калуський міськрайонний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0909",
       "name": "Коломийський міськрайонний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0911",
       "name": "Надвірнянський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0914",
       "name": "Снятинський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0915",
       "name": "Тисменицький районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0917",
       "name": "Яремчанський міський суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0970",
       "name": "Івано-Франківський окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": 1002,
@@ -1665,31 +1665,31 @@
       "court_code": "0390",
       "name": "Апеляційний суд Волинської області",
       "instance_code": 2,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0407",
       "name": "Вільногірський міський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0553",
       "name": "Червоногвардійський районний суд м. Макіївки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0613",
       "name": "Любарський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0704",
       "name": "Воловецький районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": 1021,
@@ -1737,7 +1737,7 @@
       "court_code": 5008,
       "name": "Господарський суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": 9002,
@@ -2223,37 +2223,37 @@
       "court_code": 5002,
       "name": "Господарський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": 5004,
       "name": "Господарський суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": 5006,
       "name": "Господарський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 5007,
       "name": "Господарський суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": 5009,
       "name": "Господарський суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 5010,
       "name": "Господарський суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": 5011,
@@ -2325,19 +2325,19 @@
       "court_code": 5029,
       "name": "Дніпропетровський апеляційний господарський суд",
       "instance_code": 2,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 5031,
       "name": "Житомирський апеляційний господарський суд",
       "instance_code": 2,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": 5032,
       "name": "Запорізький апеляційний господарський суд",
       "instance_code": 2,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 5035,
@@ -2373,13 +2373,13 @@
       "court_code": 9101,
       "name": "Дніпропетровський апеляційний адміністративний суд",
       "instance_code": 2,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 9102,
       "name": "Донецький апеляційний адміністративний суд",
       "instance_code": 2,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 9104,
@@ -2427,7 +2427,7 @@
       "court_code": "0812",
       "name": "Комунарський районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 2020,
@@ -2475,259 +2475,259 @@
       "court_code": "0104",
       "name": "Білогірський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0107",
       "name": "Залізничний районний суд м. Сімферополя",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0110",
       "name": "Кіровський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0115",
       "name": "Первомайський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0118",
       "name": "Сімферопольский районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0121",
       "name": "Феодосійський міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0201",
       "name": "Барський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0203",
       "name": "Вінницький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0206",
       "name": "Замостянський районний суд м. Вінниці",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0211",
       "name": "Ладижинський міський суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0213",
       "name": "Липовецький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0216",
       "name": "Мурованокуриловецький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0218",
       "name": "Оратівський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0306",
       "name": "Ковельський міськрайонний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0311",
       "name": "Маневицький районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0401",
       "name": "Амур-Нижньодніпровський районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0404",
       "name": "Баглійський районний суд м. Дніпродзержинська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0408",
       "name": "Дзержинський районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0410",
       "name": "Дніпропетровський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0422",
       "name": "Ленінський районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0424",
       "name": "Марганецький міський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0431",
       "name": "Петриківський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0433",
       "name": "Покровський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0436",
       "name": "Самарський районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0441",
       "name": "Тернівський районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0444",
       "name": "Центрально-Міський районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0446",
       "name": "Юр'ївський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0522",
       "name": "Калінінський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0525",
       "name": "Кіровський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0527",
       "name": "Костянтинівський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0532",
       "name": "Ленінський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0535",
       "name": "Новоазовський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0537",
       "name": "Олександрівський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0545",
       "name": "Сніжнянський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0547",
       "name": "Старобешівський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0552",
       "name": "Центрально-Міський районний суд м. Макіївки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0601",
       "name": "Андрушівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0607",
       "name": "Ємільчинський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0609",
       "name": "Корольовський районний суд м. Житомира",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0612",
       "name": "Лугинський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0618",
       "name": "Олевський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0620",
       "name": "Радомишльський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0625",
       "name": "Чуднівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": 1028,
@@ -3033,61 +3033,61 @@
       "court_code": "0102",
       "name": "Армянський міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0103",
       "name": "Бахчисарайський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0109",
       "name": "Київський районний суд м. Сімферополя",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0112",
       "name": "Красноперекопський міськрайонний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0551",
       "name": "Центрально-Міський районний суд м. Горлівки",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0602",
       "name": "Баранівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0604",
       "name": "Богунський районний суд м. Житомира",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0610",
       "name": "Коростенський міськрайонний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0615",
       "name": "Народицький районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0617",
       "name": "Овруцький районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": 9992,
@@ -3099,67 +3099,67 @@
       "court_code": "0703",
       "name": "Виноградівський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0705",
       "name": "Іршавський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0708",
       "name": "Перечинський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0712",
       "name": "Ужгородський міськрайонний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0809",
       "name": "Заводський районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0815",
       "name": "Мелітопольський міськрайонний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0816",
       "name": "Михайлівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0828",
       "name": "Якимівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0910",
       "name": "Косівський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0912",
       "name": "Рогатинський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": "0990",
       "name": "Апеляційний суд Івано-Франківської області",
       "instance_code": 2,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": 1005,
@@ -3231,7 +3231,7 @@
       "court_code": "0426",
       "name": "Нікопольський міськрайонний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 1107,
@@ -3465,7 +3465,7 @@
       "court_code": 5003,
       "name": "Господарський суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": 5012,
@@ -3501,7 +3501,7 @@
       "court_code": 5030,
       "name": "Донецький апеляційний господарський суд",
       "instance_code": 2,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 5034,
@@ -3543,13 +3543,13 @@
       "court_code": "0406",
       "name": "Верхньодніпровський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0539",
       "name": "Першотравневий районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 1018,
@@ -3579,7 +3579,7 @@
       "court_code": "0690",
       "name": "Апеляційний суд Житомирської області",
       "instance_code": 2,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": 1590,
@@ -3591,7 +3591,7 @@
       "court_code": "0801",
       "name": "Бердянський міськрайонний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 1412,
@@ -3603,217 +3603,217 @@
       "court_code": "0208",
       "name": "Калинівський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0220",
       "name": "Погребищенський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0116",
       "name": "Роздольненський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0124",
       "name": "Ялтинський міський суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0205",
       "name": "Жмеринський міськрайонний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0212",
       "name": "Ленінський районний суд м. Вінниці",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0217",
       "name": "Немирівський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0223",
       "name": "Тиврівський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0227",
       "name": "Хмільницький міськрайонний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0231",
       "name": "Ямпільський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0302",
       "name": "Горохівський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0305",
       "name": "Ківерцівський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0313",
       "name": "Ратнівський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0403",
       "name": "Бабушкінський районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0409",
       "name": "Дніпровський районний суд м. Дніпродзержинська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0415",
       "name": "Заводський районний суд м. Дніпродзержинська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0416",
       "name": "Інгулецький районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0421",
       "name": "Криничанський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0428",
       "name": "Орджонікідзевський міський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0430",
       "name": "Першотравеньський міський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0437",
       "name": "Синельниківський міськрайонний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0439",
       "name": "Софіївський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0443",
       "name": "Царичанський районний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0501",
       "name": "Авдіївський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0502",
       "name": "Амвросієвський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0507",
       "name": "Володарський районний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0511",
       "name": "Дебальцевський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0515",
       "name": "Докучаєвський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0519",
       "name": "Жовтневий районний суд м. Маріуполя",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0524",
       "name": "Кіровський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0530",
       "name": "Краснолиманський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0531",
       "name": "Куйбишевський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0536",
       "name": "Новогродівський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0540",
       "name": "Петровський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0544",
       "name": "Слов'янський міськрайонний суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0550",
       "name": "Харцизький міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 1325,
@@ -3825,7 +3825,7 @@
       "court_code": "0516",
       "name": "Дружківський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 1401,
@@ -3897,25 +3897,25 @@
       "court_code": 9108,
       "name": "Вінницький апеляційний адміністративний суд",
       "instance_code": 2,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": 9109,
       "name": "Житомирський апеляційний адміністративний суд",
       "instance_code": 2,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0603",
       "name": "Бердичівський міськрайонний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0622",
       "name": "Ружинський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": 1090,
@@ -4155,7 +4155,7 @@
       "court_code": 5005,
       "name": "Господарський суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 1010,
@@ -4209,7 +4209,7 @@
       "court_code": "0111",
       "name": "Красногвардійський районний суд",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": 2208,
@@ -4239,19 +4239,19 @@
       "court_code": "0214",
       "name": "Літинський районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0228",
       "name": "Чернівецький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0232",
       "name": "Вінницький міський суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": 2415,
@@ -4287,7 +4287,7 @@
       "court_code": "0309",
       "name": "Любешівський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": 1327,
@@ -4305,31 +4305,31 @@
       "court_code": "0624",
       "name": "Черняхівський районний суд Житомирської області",
       "instance_code": 3,
-      "region_code": "06"
+      "region_code": 6
     },
     {
       "court_code": "0123",
       "name": "Чорноморський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0113",
       "name": "Ленінський районний суд Автономної Республіки Крим",
       "instance_code": 3,
-      "region_code": "01"
+      "region_code": 1
     },
     {
       "court_code": "0805",
       "name": "Вільнянський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0906",
       "name": "Долинський районний суд Івано-Франківської області",
       "instance_code": 3,
-      "region_code": "09"
+      "region_code": 9
     },
     {
       "court_code": 2109,
@@ -4389,7 +4389,7 @@
       "court_code": "0813",
       "name": "Куйбишевський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 1908,
@@ -4407,13 +4407,13 @@
       "court_code": "0419",
       "name": "Красногвардійський районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0570",
       "name": "Донецький окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 1519,
@@ -4431,13 +4431,13 @@
       "court_code": "0225",
       "name": "Тростянецький районний суд Вінницької області",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0549",
       "name": "Торезький міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 1112,
@@ -4497,13 +4497,13 @@
       "court_code": "0270",
       "name": "Вінницький окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "02"
+      "region_code": 2
     },
     {
       "court_code": "0470",
       "name": "Дніпропетровський окружний адміністративний суд",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 1530,
@@ -4527,7 +4527,7 @@
       "court_code": "0504",
       "name": "Будьоннівський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 2107,
@@ -4545,19 +4545,19 @@
       "court_code": "0429",
       "name": "Павлоградський міськрайонний суд Дніпропетровської області",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": "0509",
       "name": "Вугледарський міський суд Донецької області",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": "0702",
       "name": "Великоберезнянський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": 1101,
@@ -4581,7 +4581,7 @@
       "court_code": "0825",
       "name": "Хортицький районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 2006,
@@ -4605,7 +4605,7 @@
       "court_code": "0542",
       "name": "Пролетарський районний суд м. Донецька",
       "instance_code": 3,
-      "region_code": "05"
+      "region_code": 5
     },
     {
       "court_code": 1304,
@@ -4623,19 +4623,19 @@
       "court_code": "0314",
       "name": "Рожищенський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0316",
       "name": "Турійський районний суд Волинської області",
       "instance_code": 3,
-      "region_code": "03"
+      "region_code": 3
     },
     {
       "court_code": "0803",
       "name": "Великобілозерський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 1308,
@@ -4653,13 +4653,13 @@
       "court_code": "0701",
       "name": "Берегівський районний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": "0707",
       "name": "Мукачівський міськрайонний суд Закарпатської області",
       "instance_code": 3,
-      "region_code": "07"
+      "region_code": 7
     },
     {
       "court_code": 1102,
@@ -4683,19 +4683,19 @@
       "court_code": "0827",
       "name": "Шевченківський районний суд м. Запоріжжя",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0810",
       "name": "Запорізький районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": "0821",
       "name": "Приазовський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 5033,
@@ -4713,7 +4713,7 @@
       "court_code": "0413",
       "name": "Жовтневий районний суд м. Кривого Рогу",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 1917,
@@ -4731,7 +4731,7 @@
       "court_code": "0417",
       "name": "Індустріальний районний суд м. Дніпропетровська",
       "instance_code": 3,
-      "region_code": "04"
+      "region_code": 4
     },
     {
       "court_code": 2030,
@@ -4755,7 +4755,7 @@
       "court_code": "0802",
       "name": "Василівський районний суд Запорізької області",
       "instance_code": 3,
-      "region_code": "08"
+      "region_code": 8
     },
     {
       "court_code": 2004,

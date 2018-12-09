@@ -43,7 +43,9 @@
   justify-content: space-between;
   margin: 0 -10px;
 }
-
+.courtBlock {
+  padding-left: 10px;
+}
 .formElem {
   margin: 0 10px;
 }

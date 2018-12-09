@@ -1,38 +1,38 @@
 [
     {
-      "region_code": "01",
+      "region_code": 1,
       "name": "Автономна Республіка Крим"
     },
     {
-      "region_code": "02",
+      "region_code": 2,
       "name": "Вінницька область"
     },
     {
-      "region_code": "03",
+      "region_code": 3,
       "name": "Волинська область"
     },
     {
-      "region_code": "04",
+      "region_code": 4,
       "name": "Дніпропетровська область"
     },
     {
-      "region_code": "05",
+      "region_code": 5,
       "name": "Донецька область"
     },
     {
-      "region_code": "06",
+      "region_code": 6,
       "name": "Житомирська область"
     },
     {
-      "region_code": "07",
+      "region_code": 7,
       "name": "Закарпатська область"
     },
     {
-      "region_code": "08",
+      "region_code": 8,
       "name": "Запорізька область"
     },
     {
-      "region_code": "09",
+      "region_code": 9,
       "name": "Івано-Франківська область"
     },
     {

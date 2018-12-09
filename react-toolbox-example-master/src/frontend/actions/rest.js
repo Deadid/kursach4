@@ -20,7 +20,11 @@ export function searchDocuments (query) {
       type: actionTypes.DOCUMENTS_RETREIVED,
       docs: response.content,
       searchInfo: response
-    }))
+    })).catch(response => {
+      dispatch({
+        type: actionTypes.SEARCH_ERROR
+      })
+    })
   }
 }
 export function addDocument (data) {

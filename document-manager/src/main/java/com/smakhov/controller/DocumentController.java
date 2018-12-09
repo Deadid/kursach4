@@ -1,6 +1,6 @@
 package com.smakhov.controller;
 
-import com.smakhov.dao.elasticsearch.DocumentDao;
+import com.smakhov.dao.DocumentDao;
 import com.smakhov.dao.elasticsearch.ElasticsearchDocumentDao;
 import com.smakhov.dto.DocumentBean;
 import com.smakhov.entity.DocumentEntity;
@@ -29,6 +29,22 @@ public class DocumentController {
 		this.documentDao = documentDao;
 	}
 
+	@GetMapping("/")
+	public List<DocumentBean> findAll() {
+		List<ElasticsearchDocumentEntity> entities = new ArrayList<>();
+		elasticsearchDocumentDao.findAll().forEach(entities::add);
+		return entities.stream().map(entity -> {
+			DocumentBean bean = new DocumentBean(entity.getId(), entity.getId(), entity.getContent(), null);
+			bean.add(linkTo(methodOn(DocumentController.class).getById(entity.getId())).withSelfRel());
+			return bean;
+		}).collect(Collectors.toList());
+	}
+
+	@PostMapping("/search")
+	public Page<ElasticsearchDocumentEntity> search(@RequestParam("query") String query) {
+		return elasticsearchDocumentDao.findByTitle(query, new PageRequest(0, 1000));
+	}
+
 	@GetMapping("/{id}")
 	public DocumentBean getById(@PathVariable String id) {
 
@@ -38,26 +54,10 @@ public class DocumentController {
 
 		return bean;
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable String id) {
 		elasticsearchDocumentDao.deleteById(id);
-	}
-	
-	@PostMapping("/search")
-	public Page<ElasticsearchDocumentEntity> search(@RequestParam("query") String query) {
-		return elasticsearchDocumentDao.findByTitle(query, new PageRequest(0, 1000));
-	}
-	
-	@GetMapping("/")
-	public List<DocumentBean> findAll() {
-		List<ElasticsearchDocumentEntity> entities = new ArrayList<>();
-				elasticsearchDocumentDao.findAll().forEach(entities::add);
-		return entities.stream().map(entity -> {
-			DocumentBean bean = new DocumentBean(entity.getId(), entity.getId(), entity.getContent(), null);
-			bean.add(linkTo(methodOn(DocumentController.class).getById(entity.getId())).withSelfRel());
-			return bean;
-		}).collect(Collectors.toList());
 	}
 
 	
