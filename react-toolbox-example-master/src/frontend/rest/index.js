@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch'
 
-import searchResult from '../test_jsons/state.js'; // remove it when request will work
+import searchResult from '../test_jsons/state.js';
 
 class RestService {
   searchDocuments(query) {
@@ -14,7 +14,7 @@ class RestService {
     })
       .then(response => response.json())
       .catch(() => {
-        return searchResult.search.searchInfo; // fake data. Remove it when local requests will work
+        return searchResult.search.searchInfo; 
       })
   }
 
